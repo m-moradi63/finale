@@ -10,11 +10,13 @@ import { Searchesadd } from "../usablesubcomponent/searchadd .tsx";
 import { Dropdownfile } from "../usablesubcomponent/dropdownfile.tsx";
 import useSWR from "swr";
 import { getBranch } from "../api/getbranches.ts";
-
+import { useContent } from "../hooks/usecontent.ts";
+import { Contenttree } from "./Content.tsx";
 export function Mainrepo() {
   const params = useParams();
   console.log("paramsparams", params.Repotab);
   console.log("paramsparams1", params.username);
+  console.log("paramsparams3", params.Repotab);
 
   const { repoinfo, setrepoinfo, setloadingRepos, loadingRepos } = useRepos(
     params.username!,
@@ -24,8 +26,9 @@ export function Mainrepo() {
   const { Getuser, loading } = useProfile(params.username!);
 
   /* const { branch } = useBranches(params.username!, params.Repotab!); */
-  const { data, error, isLoading } = useSWR(`Branch-${params.Repotab!}`, ()=>{return getBranch(params.username! , params.Repotab!)})
-
+  const { data, error, isLoading } = useSWR(`Branch-${params.Repotab!}`, () => {
+    return getBranch(params.username!, params.Repotab!);
+  });
 
   const [click, setclick] = useState(false);
   const handleClick = () => setclick(!click);
@@ -41,21 +44,6 @@ export function Mainrepo() {
   let neww = "";
 
   const closeMobileview = () => setclick(false);
-  /* const [dropdown, Setdropdown] = useState(false);
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      Setdropdown(false);
-    } else {
-      Setdropdown(true);
-    }
-  };
-  const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      Setdropdown(false);
-    } else {
-      Setdropdown(false);
-    }
-  }; */
 
   if (loading) {
     return <div className="w-[274px] h-[2rem]   ">Loading</div>;
@@ -155,8 +143,9 @@ export function Mainrepo() {
           </div>
         </div>
         <div className="flex items-start">
-          <div className="flex items-center">
-            <div className="flex items-center h-[6rem] me-20">
+          <div className="flex flex-col  ">
+          <div className="flex items-center ">
+            <div className="flex items-center h-[6rem] me-20 ">
               <button className="  me-2  w-[6rem] h-[2rem] rounded-lg  border-2 border-solid ">
                 <div className="text-center flex items-center ml-[1.6rem]">
                   <svg
@@ -194,7 +183,7 @@ export function Mainrepo() {
                   >
                     <path d="M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"></path>
                   </svg>
-                  <span> {data.length}</span>
+                  <span> {data?.length}</span>
                   <span>Branche</span>
                 </div>
                 <div>
@@ -262,7 +251,14 @@ export function Mainrepo() {
                 {fileclick && <Dropdownfile />}
               </i>
             </button>
+            </div>
+            <div className="border-2 solid  w-[47rem] rounded-xl">
+            <div className="border-b bg-slate-100 h-[4rem] py-5 w-full "><span >{params.username}</span></div>
+            <div className="rounded-xl" >{<Contenttree />}</div>
+            </div>
           </div>
+          
+          
           <div className="ms-6 w-[16rem] border-none solid  h-[20rem] font-serift">
             About
             <br />A massively spiffy yet delicately unobtrusive compression
@@ -369,7 +365,6 @@ export function Mainrepo() {
               </svg>
               {repoinfo.forks_count}forks
             </a>
-           
           </div>
         </div>
       </div>
