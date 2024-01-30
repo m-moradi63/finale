@@ -10,7 +10,7 @@ function generateRepositoryLink(username , repository){
 
 
 export function RenderCateg(props: RenderCategProps) {
-  console.log("reposittttttttt:" , props.reposit)
+  
   return (
     <div className="flex flex-wrap  ">
       {" "}

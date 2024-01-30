@@ -34193,15 +34193,19 @@ function useProfile(username) {
 function applyFilter(List, filter, searchItem, languageItem) {
     console.log("listtttt", List);
     console.log("filterrrrr", filter);
-    return List.filter((elm)=>{
-        if (filter === "Forks" && languageItem !== "All") return elm.fork === true && elm.name.includes(searchItem) && elm.language === languageItem;
-        else if (filter === "Archived" && languageItem !== "All") return elm.Archived === true && elm.name.includes(searchItem) && elm.language === languageItem;
-        else if (filter === "Forks" && languageItem === "All") return elm.fork === true && elm.name.includes(searchItem);
-        else if (filter === "Archived" && languageItem === "All") return elm.Archived === true && elm.name.includes(searchItem);
-        else if (languageItem !== "All" && filter === "All") return elm.language === languageItem && elm.name.includes(searchItem);
-        else if (languageItem === "All" && filter === "All") return elm.name.includes(searchItem);
-        else if (languageItem === "" && filter === "") return elm.name.includes(searchItem);
+    let output = List;
+    if (filter) output = output.filter((elm)=>{
+        if (filter === "Forks") return elm.fork === true;
+        else if (filter === "Archived") return elm.Archived === true;
+        else return true;
     });
+    if (languageItem && languageItem !== "All") output = output.filter((elm)=>{
+        if (languageItem === elm.language) return true;
+    });
+    if (searchItem) output = output.filter((elm)=>{
+        return elm.name.includes(searchItem);
+    });
+    return output;
 /*  function fidrepository(applyFilter , searchItem:string){
   if(searchItem) {
    applyFilter.filter ((elm)=>{
@@ -46029,7 +46033,7 @@ async function verify(secret, eventPayload, signature) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "token", ()=>token);
-const token = "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";
+const token = "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";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9WCqk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -63009,7 +63013,6 @@ function generateRepositoryLink(username, repository) {
     return `/${username}/${repository}`;
 }
 function RenderCateg(props) {
-    console.log("reposittttttttt:", props.reposit);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex flex-wrap  ",
         children: [
@@ -69763,6 +69766,7 @@ var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _react1 = require("@phosphor-icons/react");
+var _usecommitTs = require("../hooks/usecommit.ts");
 var _s = $RefreshSig$();
 function Contenttree() {
     _s();
@@ -69771,73 +69775,83 @@ function Contenttree() {
     console.log("owner :", paramse.Repotab);
     const { contents, setcontent } = (0, _usecontentTs.useContent)(paramse.username, paramse.Repotab);
     console.log("contenet :", contents);
-    if (contents) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            contents.map((itms)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: " w-full flex ",
-                    children: itms.type === "dir" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "flex h-[3rem] border-b-2 w-full solid  border-zinc-200",
+    const { commit, setcommit, loadingCommit, setloadingCommit } = (0, _usecommitTs.useCommit)(paramse.username, paramse.Repotab);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                contents.sort((a, b)=>{
+                    return a.type == "dir" ? -1 : 1;
+                }).map((itms)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: " w-full flex ",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react1.Folder), {
-                                size: 24,
-                                color: "#5e5eff"
-                            }, void 0, false, {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex h-[3rem] border-b-2 w-full solid  border-zinc-200",
+                                children: [
+                                    itms.type === "dir" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react1.Folder), {
+                                        size: 24,
+                                        color: "#5e5eff"
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/Content.tsx",
+                                        lineNumber: 29,
+                                        columnNumber: 30
+                                    }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react1.File), {
+                                        size: 24
+                                    }, void 0, false, {
+                                        fileName: "src/subcomponent/Content.tsx",
+                                        lineNumber: 29,
+                                        columnNumber: 66
+                                    }, this),
+                                    itms.name,
+                                    commit.map((itmse)=>{
+                                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            children: itmse.commit.message
+                                        }, void 0, false, {
+                                            fileName: "src/subcomponent/Content.tsx",
+                                            lineNumber: 33,
+                                            columnNumber: 13
+                                        }, this);
+                                    })
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/subcomponent/Content.tsx",
-                                lineNumber: 25,
-                                columnNumber: 108
+                                lineNumber: 28,
+                                columnNumber: 10
                             }, this),
-                            itms.name,
-                            " "
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                                fileName: "src/subcomponent/Content.tsx",
+                                lineNumber: 42,
+                                columnNumber: 11
+                            }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Content.tsx",
-                        lineNumber: 25,
-                        columnNumber: 35
-                    }, this) : null
-                }, void 0, false, {
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, this);
+                }),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
                     fileName: "src/subcomponent/Content.tsx",
-                    lineNumber: 24,
-                    columnNumber: 13
-                }, this);
-            }),
-            contents.map((itms)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "border-b border-zinc-200 w-full flex",
-                    children: itms.type === "file" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "flex h-[3rem] w-[10rem]",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react1.File), {
-                                size: 24
-                            }, void 0, false, {
-                                fileName: "src/subcomponent/Content.tsx",
-                                lineNumber: 33,
-                                columnNumber: 78
-                            }, this),
-                            itms.name
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/subcomponent/Content.tsx",
-                        lineNumber: 33,
-                        columnNumber: 36
-                    }, this) : ""
-                }, void 0, false, {
-                    fileName: "src/subcomponent/Content.tsx",
-                    lineNumber: 32,
-                    columnNumber: 13
-                }, this);
-            })
-        ]
-    }, void 0, true, {
+                    lineNumber: 46,
+                    columnNumber: 8
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/subcomponent/Content.tsx",
+            lineNumber: 24,
+            columnNumber: 6
+        }, this)
+    }, void 0, false, {
         fileName: "src/subcomponent/Content.tsx",
-        lineNumber: 21,
+        lineNumber: 23,
         columnNumber: 6
     }, this);
 }
-_s(Contenttree, "ci8bR3paAyWE3mog5P+h+vp/6wo=", false, function() {
+_s(Contenttree, "3Yvs8JZEoqhDblz2JNnh8iT2Ti0=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
-        (0, _usecontentTs.useContent)
+        (0, _usecontentTs.useContent),
+        (0, _usecommitTs.useCommit)
     ];
 });
 _c = Contenttree;
@@ -69849,7 +69863,7 @@ $RefreshReg$(_c, "Contenttree");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../hooks/usecontent.ts":"irOZV","react-router-dom":"9xmpe","react":"21dqq","@phosphor-icons/react":"ljzWN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"irOZV":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../hooks/usecontent.ts":"irOZV","react-router-dom":"9xmpe","react":"21dqq","@phosphor-icons/react":"ljzWN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../hooks/usecommit.ts":"8FiSV"}],"irOZV":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$57ea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -72690,7 +72704,63 @@ const a = /* @__PURE__ */ new Map([
     ]
 ]);
 
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"84eGR":[function(require,module,exports) {
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8FiSV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4d25 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4d25.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "useCommit", ()=>useCommit);
+var _react = require("react");
+var _getCommitTs = require("../api/getCommit.ts");
+function useCommit(owner, name) {
+    const [loadingCommit, setloadingCommit] = (0, _react.useState)(true);
+    const [commit, setcommit] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        setloadingCommit(true);
+        (0, _getCommitTs.getCommits)(owner, name).then(function(data) {
+            setcommit(data);
+            setloadingCommit(false);
+        });
+    }, []);
+    return {
+        loadingCommit: loadingCommit,
+        setloadingCommit: setloadingCommit,
+        setcommit: setcommit,
+        commit: commit
+    };
+}
+
+  $parcel$ReactRefreshHelpers$4d25.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","../api/getCommit.ts":"4iTXB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4iTXB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getCommits", ()=>getCommits);
+var _octokit = require("octokit");
+var _constantTs = require("../constant.ts");
+async function getCommits(owner, name) {
+    const octokit = new (0, _octokit.Octokit)({
+        auth: (0, _constantTs.token)
+    });
+    const Commits = await octokit.request("GET /repos/{owner}/{repo}/commits", {
+        owner: owner,
+        repo: name,
+        headers: {
+            "X-GitHub-Api-Version": "2022-11-28"
+        }
+    });
+    console.log("Commits", Commits.data.length);
+    return Commits.data;
+}
+
+},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"84eGR":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$683e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

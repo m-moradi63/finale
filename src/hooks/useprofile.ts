@@ -1,3 +1,4 @@
+import { ALL } from "dns";
 import { User, getUser } from "../api/getUser.ts";
 import { getRepos, Repositoryes} from "../api/getrepository"
 import { useEffect, useState } from "react";
@@ -83,30 +84,37 @@ export function useProfile(username:string ) {
 function applyFilter(List:Array<Repositoryes> , filter:string, searchItem:string , languageItem:string ){
   console.log("listtttt" , List )
   console.log("filterrrrr"  ,filter)
-
-  return List.filter((elm)=>{
-    if (filter==="Forks" && languageItem!=="All" ) {
-      return elm.fork===true && elm.name.includes(searchItem) && elm.language===languageItem
+ 
+let output = List
+if (filter){
+  output = output.filter((elm)=>{
+    if(filter==="Forks"){
+      return elm.fork===true
     }
-    else if (filter === "Archived" && languageItem!=="All"){
-      return elm.Archived===true  && elm.name.includes(searchItem) && elm.language===(languageItem)
+    else if(filter === "Archived"){
+      return elm.Archived===true
     }
-    else if (filter === "Forks" && languageItem==="All"){
-      return elm.fork===true  && elm.name.includes(searchItem) 
-    }
-    else if (filter === "Archived" && languageItem==="All"){
-      return elm.Archived===true  && elm.name.includes(searchItem)
-    }
-    else if (languageItem!=="All" && filter==="All" ){
-      return elm.language===(languageItem) && elm.name.includes(searchItem) 
-      }
-    else if (languageItem==="All" && filter==="All" ){
-    return true && elm.name.includes(searchItem) 
-    }
-    else if (languageItem==="" && filter==="" ){
-      return true && elm.name.includes(searchItem) 
-      }
+  else return true
   })
+}
+
+if(languageItem && languageItem!=="All"){
+  output = output.filter((elm)=>{
+    if(languageItem===elm.language){
+      return true
+    }
+  })
+
+}
+if(searchItem){
+  output = output.filter((elm)=>{
+    return elm.name.includes(searchItem)
+  })
+}
+return output
+
+  
+  
  /*  function fidrepository(applyFilter , searchItem:string){
   if(searchItem) {
    applyFilter.filter ((elm)=>{
