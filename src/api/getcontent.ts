@@ -7,15 +7,10 @@ import path from "path";
 export  interface contented{
   id: number;
     node_id: string;
+    sha:string;
     name: string;
     full_name: string;
-    owner: {
-        name?: string | null | undefined;
-        email?: string | null | undefined;
-        login: string;
-        id: number;
-        node_id: string;
-        avatar_url: string;}
+
 }
 async function getContent(owner:string , repo:string ):Promise<Array<contented>> {
  

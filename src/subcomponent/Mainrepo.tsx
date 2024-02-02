@@ -14,15 +14,12 @@ import { useContent } from "../hooks/usecontent.ts";
 import { Contenttree } from "./Content.tsx";
 export function Mainrepo() {
   const params = useParams();
-  console.log("paramsparams", params.Repotab);
-  console.log("paramsparams1", params.username);
-  console.log("paramsparams3", params.Repotab);
+  
 
   const { repoinfo, setrepoinfo, setloadingRepos, loadingRepos } = useRepos(
     params.username!,
     params.Repotab!
   );
-  console.log("repoinforepoinforepoinfo", repoinfo);
   const { Getuser, loading } = useProfile(params.username!);
 
   /* const { branch } = useBranches(params.username!, params.Repotab!); */
@@ -34,11 +31,11 @@ export function Mainrepo() {
   const handleClick = () => setclick(!click);
   const [brclick, setbrclick] = useState(false);
   const handleClickbr = () => {
-    setbrclick(!brclick), console.log("brclick", brclick);
+    setbrclick(!brclick);
   };
   const [fileclick, setfileclick] = useState(false);
   const handleClickfile = () => {
-    setfileclick(!fileclick), console.log("brclick", brclick);
+    setfileclick(!fileclick);
   };
   let newurl = "";
   let neww = "";
