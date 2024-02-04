@@ -12,10 +12,15 @@ import useSWR from "swr";
 import { getBranch } from "../api/getbranches.ts";
 import { useContent } from "../hooks/usecontent.ts";
 import { Contenttree } from "./Content.tsx";
+import { useLanguage } from "../hooks/uselanguage.ts";
+import { Persentage } from "./persantage.tsx";
 export function Mainrepo() {
   const params = useParams();
   
-
+  const { languages, setLanguages } = useLanguage(
+    params.username!,
+    params.Repotab!
+  );
   const { repoinfo, setrepoinfo, setloadingRepos, loadingRepos } = useRepos(
     params.username!,
     params.Repotab!
@@ -256,7 +261,8 @@ export function Mainrepo() {
           </div>
           
           
-          <div className="ms-6 w-[16rem] border-none solid  h-[20rem] font-serift">
+          <div>
+           <div className="ms-6 w-[16rem] border-none solid  h-[20rem] font-serift">
             About
             <br />A massively spiffy yet delicately unobtrusive compression
             library.
@@ -362,6 +368,11 @@ export function Mainrepo() {
               </svg>
               {repoinfo.forks_count}forks
             </a>
+            <div>
+              
+              <Persentage />
+            </div>
+          </div>
           </div>
         </div>
       </div>
