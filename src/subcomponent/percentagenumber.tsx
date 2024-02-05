@@ -3,7 +3,7 @@ import { useLanguage } from "../hooks/uselanguage";
 
 
 
-export function Persentage() {
+export function PersentageNUM() {
     const paramsee = useParams();
 const { languages, setLanguages } = useLanguage(
     paramsee.username!,
@@ -28,7 +28,7 @@ const Sum =  entries.map((itm)=>{
 
 
 return (
-    <div className="flex gap-[0.2px] border-2 solid  h-[0.7rem] w-[15.5rem] rounded-xl mt-[2rem]">
+    <div className=" mt-[2rem]">
         { entries.map((itm,index)=>{
             /* console.log("itmm" , itm[0])
            console.log("itmmee" , itm[1])
@@ -38,15 +38,15 @@ return (
            /* `${w-[(((itm[1]/sum)*100).toFixed(2))%]}  ` */
            return (
        <>
-               {entries[0][0]===itm[0]? <div key = {index} className={`w-[${(((itm[1]/sum)*100).toFixed(2))+"%"}] bg-[#4338ca] border-2  solid h-[0.7rem] rounded-s-xl`} >
-               
+               {entries[0][0]===itm[0]? <div key = {index} className="text-[#4338ca]" >
+               {itm[0]}:{(((itm[1]/sum)*100).toFixed(0))+"%"}
                </div>:undefined}
-               {entries[1] && entries[1][0]===itm[0]? <div key = {index} className={`w-[${(((itm[1]/sum)*100).toFixed(2))+"%"}] bg-[#6b21a8] border-2  solid h-[0.7rem] `} >
-               
-               </div>:""}
-               {entries[2] && entries[2][0]===itm[0]? <div key = {index} className={`w-[${(((itm[1]/sum)*100).toFixed(2))+"%"}] bg-[#e11d48] border-2  solid h-[0.7rem] rounded-e-xl`} >
-               
-               </div>:""}
+               {entries[1] && entries[1][0]===itm[0]? <div key = {index} className="text-[#6b21a8]" >
+               {itm[0]}:{(((itm[1]/sum)*100).toFixed(0))+"%"}
+               </div>:undefined}
+               {entries[2] && entries[2][0]===itm[0]?<div key = {index} className="text-[#e11d48]" >
+               {itm[0]}:{(((itm[1]/sum)*100).toFixed(0))+"%"}
+               </div>:undefined}
       </>
      
             

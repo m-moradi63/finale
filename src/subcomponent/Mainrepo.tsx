@@ -14,6 +14,7 @@ import { useContent } from "../hooks/usecontent.ts";
 import { Contenttree } from "./Content.tsx";
 import { useLanguage } from "../hooks/uselanguage.ts";
 import { Persentage } from "./persantage.tsx";
+import { PersentageNUM } from "./percentagenumber.tsx";
 export function Mainrepo() {
   const params = useParams();
   
@@ -368,10 +369,11 @@ export function Mainrepo() {
               </svg>
               {repoinfo.forks_count}forks
             </a>
-            <div>
+            
               
               <Persentage />
-            </div>
+              <PersentageNUM />
+            
           </div>
           </div>
         </div>
