@@ -12,7 +12,7 @@ export interface brancheses {
       },
       protected: boolean
 }
-async function getBranch(owner:string , name:string ): Promise<brancheses>{
+async function getBranch(owner:string , name:string , token:Object): Promise<brancheses>{
     
     const octokit = new Octokit({
         auth: token

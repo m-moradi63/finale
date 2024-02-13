@@ -9,7 +9,7 @@ export interface language{
 }
 
 
-export async function getLanguage(owner:string , repo:string):Promise<language>{
+export async function getLanguage(owner:string , repo:string , token:Object):Promise<language>{
 const octokit = new Octokit({
     auth: token
   })

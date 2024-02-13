@@ -1,5 +1,5 @@
 import { Octokit } from "octokit";
-import {token} from "../constant.ts"
+
 
 
 export interface Repositoryes{
@@ -19,7 +19,7 @@ export interface Repositoryes{
 }
 
 
-async function getRepos(username:string): Promise<Array<Repositoryes>> {
+async function getRepos(username:string , token:string): Promise<Array<Repositoryes>> {
 
 
   
@@ -31,8 +31,6 @@ async function getRepos(username:string): Promise<Array<Repositoryes>> {
       'X-GitHub-Api-Version': '2022-11-28'
     },
   }))
-
-  
   return repo.data
   
 

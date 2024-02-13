@@ -1,3 +1,6 @@
+import { Profilecontext } from "../context.ts";
+import { useContext } from "react";
+
 export function Menurepo() {
   return (
     <div className="mt-10 flex ">

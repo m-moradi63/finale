@@ -27169,22 +27169,41 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _mainTsx = require("./compunents/Main.tsx");
+var _contextTs = require("./context.ts");
+var _constantTs = require("./constant.ts");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
 function App(username) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " apple-system BlinkMacSystemFont ",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainTsx.Main), {
-            username: username
+    _s();
+    const param = (0, _reactRouterDom.useParams)();
+    console.log("uu", param.username);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contextTs.Profilecontext).Provider, {
+        value: {
+            token: (0, _constantTs.token)
+        },
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: " apple-system BlinkMacSystemFont ",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainTsx.Main), {}, void 0, false, {
+                fileName: "src/App.tsx",
+                lineNumber: 23,
+                columnNumber: 7
+            }, this)
         }, void 0, false, {
             fileName: "src/App.tsx",
-            lineNumber: 13,
-            columnNumber: 7
+            lineNumber: 22,
+            columnNumber: 5
         }, this)
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 11,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }
+_s(App, "robhGa1ZC4zviMRLk6t/NW5RpXI=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams)
+    ];
+});
 _c = App;
 var _c;
 $RefreshReg$(_c, "App");
@@ -27194,7 +27213,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./compunents/Main.tsx":"8rGQM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8rGQM":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./compunents/Main.tsx":"8rGQM","./context.ts":"heWSA","./constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"8rGQM":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8ac4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27209,7 +27228,11 @@ var _profileTsx = require("../Pages/profile.tsx");
 var _repoTabTsx = require("../Pages/RepoTab.tsx");
 var _reactRouterDom = require("react-router-dom");
 var _repositoriesTsx = require("../Pages/Repositories.tsx");
+var _s = $RefreshSig$();
 function Main() {
+    _s();
+    const params = (0, _reactRouterDom.useParams)();
+    console.log("eee", params);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "object-cover mx-auto    ",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
@@ -27219,53 +27242,58 @@ function Main() {
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileTsx.Profile), {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/Main.tsx",
-                    lineNumber: 14,
-                    columnNumber: 9
+                    lineNumber: 17,
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "/:username",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileTsx.Profile), {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/Main.tsx",
-                    lineNumber: 15,
-                    columnNumber: 9
+                    lineNumber: 18,
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "/:username/:Repotab",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repoTabTsx.Repotab), {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/Main.tsx",
-                    lineNumber: 16,
-                    columnNumber: 9
+                    lineNumber: 19,
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "/:username/Overview",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileTsx.Profile), {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/Main.tsx",
-                    lineNumber: 17,
-                    columnNumber: 9
+                    lineNumber: 20,
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "/:username/Repositories",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoriesTsx.Repositories), {}, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "src/compunents/Main.tsx",
-                    lineNumber: 18,
-                    columnNumber: 9
+                    lineNumber: 21,
+                    columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/compunents/Main.tsx",
-            lineNumber: 13,
-            columnNumber: 7
+            lineNumber: 16,
+            columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "src/compunents/Main.tsx",
-        lineNumber: 11,
-        columnNumber: 5
+        lineNumber: 15,
+        columnNumber: 7
     }, this);
 }
+_s(Main, "+jVsTcECDRo3yq2d7EQxlN9Ixog=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams)
+    ];
+});
 _c = Main;
 var _c;
 $RefreshReg$(_c, "Main");
@@ -27293,12 +27321,17 @@ var _overviewTsx = require("../subcomponent/Overview.tsx");
 var _reactRouterDom = require("react-router-dom");
 var _repositoriesTsx = require("./Repositories.tsx");
 var _useprofileTs = require("../hooks/useprofile.ts");
+var _contextTs = require("../context.ts");
+var _react = require("react");
 var _s = $RefreshSig$();
 function Profile() {
     _s();
+    const contex = (0, _react.useContext)((0, _contextTs.Profilecontext));
+    console.log("::::::::", contex.token);
     const params = (0, _reactRouterDom.useParams)();
+    console.log("pp", params.repotab);
     let [searchParams, setSearchParams] = (0, _reactRouterDom.useSearchParams)();
-    const { Getuser, loadingOVER } = (0, _useprofileTs.useProfile)(params.username);
+    const { Getuser, loadingOVER } = (0, _useprofileTs.useProfile)(params.username, contex.token);
     console.log("searchparams", searchParams);
     if (loadingOVER) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "absolute  top-0 left-0  right-0 border-none solid   bg-slate-300 min-w-screen-xl w-screen-xl h-[100vh] min-h-[100vh]",
@@ -27307,17 +27340,17 @@ function Profile() {
             children: "loading..."
         }, void 0, false, {
             fileName: "src/Pages/profile.tsx",
-            lineNumber: 17,
+            lineNumber: 22,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "src/Pages/profile.tsx",
-        lineNumber: 16,
+        lineNumber: 21,
         columnNumber: 7
     }, this);
     else if (searchParams.get("tab") === "repositories") return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoriesTsx.Repositories), {}, void 0, false, {
         fileName: "src/Pages/profile.tsx",
-        lineNumber: 23,
+        lineNumber: 28,
         columnNumber: 6
     }, this);
     else if (Getuser) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27327,29 +27360,10 @@ function Profile() {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTsx.Nav), {}, void 0, false, {
                         fileName: "src/Pages/profile.tsx",
-                        lineNumber: 30,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuTsx.Menu), {}, void 0, false, {
-                        fileName: "src/Pages/profile.tsx",
-                        lineNumber: 32,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/Pages/profile.tsx",
-                lineNumber: 29,
-                columnNumber: 6
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-center box-border    gap-0  ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
-                        fileName: "src/Pages/profile.tsx",
-                        lineNumber: 36,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _overviewTsx.Overview), {}, void 0, false, {
                         fileName: "src/Pages/profile.tsx",
                         lineNumber: 37,
                         columnNumber: 9
@@ -27357,17 +27371,36 @@ function Profile() {
                 ]
             }, void 0, true, {
                 fileName: "src/Pages/profile.tsx",
-                lineNumber: 35,
+                lineNumber: 34,
+                columnNumber: 6
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-center box-border    gap-0  ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
+                        fileName: "src/Pages/profile.tsx",
+                        lineNumber: 41,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _overviewTsx.Overview), {}, void 0, false, {
+                        fileName: "src/Pages/profile.tsx",
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/Pages/profile.tsx",
+                lineNumber: 40,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Pages/profile.tsx",
-        lineNumber: 28,
+        lineNumber: 33,
         columnNumber: 5
     }, this);
 }
-_s(Profile, "qfSGjM9AuhZoxfXjII4PYl1Ydho=", false, function() {
+_s(Profile, "TcoEfrVp3Roi3kt+HaqXJ5/EqIA=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _reactRouterDom.useSearchParams),
@@ -27383,7 +27416,7 @@ $RefreshReg$(_c, "Profile");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../compunents/Sidebar.tsx":"7vqEr","../subcomponent/Menu.tsx":"2wPuW","../subcomponent/nav.tsx":"lFT6V","../subcomponent/Overview.tsx":"krule","react-router-dom":"9xmpe","./Repositories.tsx":"lC32Y","../hooks/useprofile.ts":"fC2Rw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7vqEr":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../compunents/Sidebar.tsx":"7vqEr","../subcomponent/Menu.tsx":"2wPuW","../subcomponent/nav.tsx":"lFT6V","../subcomponent/Overview.tsx":"krule","react-router-dom":"9xmpe","./Repositories.tsx":"lC32Y","../hooks/useprofile.ts":"fC2Rw","../context.ts":"heWSA","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7vqEr":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$68d7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34134,7 +34167,7 @@ parcelHelpers.export(exports, "useProfile", ()=>useProfile);
 var _getUserTs = require("../api/getUser.ts");
 var _getrepository = require("../api/getrepository");
 var _react = require("react");
-function useProfile(username) {
+function useProfile(username, token) {
     const [Getuser, setGetuser] = (0, _react.useState)();
     const [loading, setloading] = (0, _react.useState)(true);
     const [repositState, setrepositState] = (0, _react.useState)([]);
@@ -34144,7 +34177,7 @@ function useProfile(username) {
     const [searchItem, setSearchItem] = (0, _react.useState)("");
     const [languageItem, setlanguageItem] = (0, _react.useState)("");
     (0, _react.useEffect)(()=>{
-        (0, _getrepository.getRepos)(username).then(function(data) {
+        (0, _getrepository.getRepos)(username, token).then(function(data) {
             setrepositState(data);
         }).finally(()=>{
             setloadingOVER(false);
@@ -34152,21 +34185,21 @@ function useProfile(username) {
     }, []);
     (0, _react.useEffect)(()=>{
         setloadingOVER(false);
-        (0, _getUserTs.getUser)(username).then(function(data) {
+        (0, _getUserTs.getUser)(username, token).then(function(data) {
             setGetuser(data);
         }).catch(()=>{
             setloadingOVER(true);
         });
     }, []);
     (0, _react.useEffect)(()=>{
-        (0, _getUserTs.getUser)(username).then(function(data) {
+        (0, _getUserTs.getUser)(username, token).then(function(data) {
             setGetuser(data);
         }).finally(()=>{
             setloading(false);
         });
     }, []);
     (0, _react.useEffect)(()=>{
-        (0, _getrepository.getRepos)(username).then(function(data) {
+        (0, _getrepository.getRepos)(username, token).then(function(data) {
             setrepositState(data);
         }).finally(()=>{
             setloadingREPO(false);
@@ -34206,14 +34239,7 @@ function applyFilter(List, filter, searchItem, languageItem) {
         return elm.name.includes(searchItem);
     });
     return output;
-/*  function fidrepository(applyFilter , searchItem:string){
-  if(searchItem) {
-   applyFilter.filter ((elm)=>{
-    return elm.includes(searchItem)}
-
-    
- 
-  } */ }
+}
 
   $parcel$ReactRefreshHelpers$50b4.postlude(module);
 } finally {
@@ -34225,10 +34251,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getUser", ()=>getUser);
 var _octokit = require("octokit");
-var _constantTs = require("../constant.ts");
-async function getUser(username) {
+async function getUser(username, token) {
     const octokit = new (0, _octokit.Octokit)({
-        auth: (0, _constantTs.token)
+        auth: token
     });
     const old = await octokit.request("GET /users/{username}/", {
         username: username,
@@ -34239,7 +34264,7 @@ async function getUser(username) {
     return old.data;
 }
 
-},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7AEgE":[function(require,module,exports) {
+},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7AEgE":[function(require,module,exports) {
 // pkg/dist-src/octokit.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -46029,21 +46054,14 @@ async function verify(secret, eventPayload, signature) {
     return await crypto.subtle.verify("HMAC", await importKey(secret, algorithm), hexToUInt8Array(signature.replace(`${algorithm}=`, "")), enc.encode(eventPayload));
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"26vZf":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "token", ()=>token);
-const token = "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";
-
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9WCqk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getRepos", ()=>getRepos);
 var _octokit = require("octokit");
-var _constantTs = require("../constant.ts");
-async function getRepos(username) {
+async function getRepos(username, token) {
     const octokit = new (0, _octokit.Octokit)({
-        auth: (0, _constantTs.token)
+        auth: token
     });
     const repo = await octokit.request("GET /users/{username}/repos/", {
         username: username,
@@ -46054,7 +46072,7 @@ async function getRepos(username) {
     return repo.data;
 }
 
-},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports) {
+},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("7422ead32dcc1e6b");
 function debounce(func, delay) {
@@ -46201,56 +46219,7 @@ $parcel$ReactRefreshHelpers$75bb.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-/* 
-export const Menu = ()=>{
-  const params = useParams();  
-  const [checked , setchecked] = useState<string>("Overview")
-    const selection = ((items:string)=>{
-        setchecked(items)
-        console.log("checkedddd" , items)
-    })
-    const slidered = ((val:string)=>{
-     if (val==="Overview") return "left-[0%]       top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
-    else if (val==="Repository") return  "left-[20%] rounded-lg   top-11    absolute h-[0.2rem] bg-[#6f55ca] w-[7rem]  "
-    else if (val==="Projectss") return  "left-[45%]    rounded-lg     top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
-    
-    else if (val==="Package") return  "left-[65%]   rounded-lg    top-11      absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
-    else if (val==="Stars") return  "left-[82%]   rounded-lg    top-11       absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
-    })
-    return(
-        <div className="relative  fonts-sans w-full bg-gray-300 ">
-        <div className=" w-[50%] flex justify-between rounded-lg flex items-center content-center flex-col">
-            
-            <input type="radio" name="slider"  value="no" id="Overview" className=" hidden"  onChange={()=>{selection("Overview")}} />
-            <input type="radio" name="slider"  value="no" id="Repository"  className=" hidden  " onChange={()=>{selection("Repository")}} />
-            <input type="radio" name="slider"  value="no" id="Projectss" className=" hidden" onChange={()=>{selection("Projectss")}} />
-            <input type="radio" name="slider" value="no" id="Package" className=" hidden" onChange={()=>{selection("Package")}}/>
-            <input type="radio" name="slider" value="no" id="Stars" className=" hidden" onChange={()=>{selection("Stars")}}/>
-            <nav className="relative   mr-[1rem]   ">
-               
-                <label  htmlFor="Overview" className= {checked==="Overview"?"me-8 text-blue-600 relative  h-[100%]  items-center text-xl font-semibold transition-all cursor-pointer":"me-8 relative  h-[100%] w-[100%] items-center text-xl font-semibold transition-all cursor-pointer"} >
-                <NavLink to={`/${params.username}/Overview`}>Overview</NavLink></label>
-                
-                
-                <label htmlFor="Repository" className={checked==="Repository"?"me-8 text-blue-600 relative h-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 ":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 "} >
-                <NavLink to={`/${params.username}/repositories`}>Repository</NavLink></label>
-                
-                <label htmlFor="Projectss" className={checked==="Projectss"?"me-8 text-blue-600 relative h-[100%] ] items-center text-xl font-semibold cursor-pointer":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" } >Projectss</label>
-                <label htmlFor="Package" className={checked==="Package"?"me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" }>Package</label>
-                <label htmlFor="Stars" className={checked==="Stars"?"me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" }>Stars</label>
-                <div id="slider" 
-                className= {slidered(checked)}
-             
-                    >
-                
-                </div>
-                <div className="rounded-xl border-none h-[1px] mt-[1rem] w-full relative bg-slate-400"></div>
-            </nav>
-            
-        </div>
-        </div>
-    )
-} */ parcelHelpers.export(exports, "Menu", ()=>Menu) /*    <div className="mt-10 flex" >
+parcelHelpers.export(exports, "Menu", ()=>Menu) /*    <div className="mt-10 flex" >
                 
                <Link to={`/${params.username}/Overview`}>
                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" className="ml-4 mr-4 inline-block octicon octicon-book UnderlineNav-octicon">
@@ -46303,12 +46272,12 @@ function Menu() {
                                 d: "M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 80,
+                                lineNumber: 31,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/subcomponent/Menu.tsx",
-                            lineNumber: 71,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
@@ -46320,13 +46289,13 @@ function Menu() {
                             children: "Overview"
                         }, void 0, false, {
                             fileName: "src/subcomponent/Menu.tsx",
-                            lineNumber: 82,
+                            lineNumber: 33,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 68,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -46344,12 +46313,12 @@ function Menu() {
                                 d: "M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 108,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/subcomponent/Menu.tsx",
-                            lineNumber: 99,
+                            lineNumber: 50,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
@@ -46361,13 +46330,13 @@ function Menu() {
                             children: "Repository"
                         }, void 0, false, {
                             fileName: "src/subcomponent/Menu.tsx",
-                            lineNumber: 110,
+                            lineNumber: 61,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 95,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -46385,12 +46354,12 @@ function Menu() {
                                 d: "M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0 1 14.25 16H1.75A1.75 1.75 0 0 1 0 14.25ZM6.5 6.5v8h7.75a.25.25 0 0 0 .25-.25V6.5Zm8-1.5V1.75a.25.25 0 0 0-.25-.25H6.5V5Zm-13 1.5v7.75c0 .138.112.25.25.25H5v-8ZM5 5V1.5H1.75a.25.25 0 0 0-.25.25V5Z"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 134,
+                                lineNumber: 85,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/subcomponent/Menu.tsx",
-                            lineNumber: 125,
+                            lineNumber: 76,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.NavLink), {
@@ -46402,13 +46371,13 @@ function Menu() {
                             children: "Project"
                         }, void 0, false, {
                             fileName: "src/subcomponent/Menu.tsx",
-                            lineNumber: 136,
+                            lineNumber: 87,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 124,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -46426,19 +46395,19 @@ function Menu() {
                                 d: "m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 160,
+                                lineNumber: 111,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/subcomponent/Menu.tsx",
-                            lineNumber: 151,
+                            lineNumber: 102,
                             columnNumber: 11
                         }, this),
                         "Packages"
                     ]
                 }, void 0, true, {
                     fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 150,
+                    lineNumber: 101,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -46456,30 +46425,30 @@ function Menu() {
                                 d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Menu.tsx",
-                                lineNumber: 175,
+                                lineNumber: 126,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/subcomponent/Menu.tsx",
-                            lineNumber: 166,
+                            lineNumber: 117,
                             columnNumber: 11
                         }, this),
                         "Packages"
                     ]
                 }, void 0, true, {
                     fileName: "src/subcomponent/Menu.tsx",
-                    lineNumber: 165,
+                    lineNumber: 116,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/subcomponent/Menu.tsx",
-            lineNumber: 67,
+            lineNumber: 18,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/subcomponent/Menu.tsx",
-        lineNumber: 66,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }
@@ -46508,13 +46477,16 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Nav", ()=>Nav);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _contextTs = require("../context.ts");
+var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
 var _useprofile = require("../hooks/useprofile");
 var _s = $RefreshSig$();
 function Nav() {
     _s();
     const params = (0, _reactRouterDom.useParams)();
-    const { Getuser, loadingOVER } = (0, _useprofile.useProfile)(params.username);
+    const contex = (0, _react.useContext)((0, _contextTs.Profilecontext));
+    const { Getuser, loadingOVER } = (0, _useprofile.useProfile)(params.username, contex.token);
     console.log("loading overrrr:", loadingOVER);
     /* if (loadingOVER) {
     return (
@@ -46546,24 +46518,24 @@ function Nav() {
                                 d: "M1 2.75A.75.75 0 0 1 1.75 2h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 2.75Zm0 5A.75.75 0 0 1 1.75 7h12.5a.75.75 0 0 1 0 1.5H1.75A.75.75 0 0 1 1 7.75ZM1.75 12h12.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Z"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/nav.tsx",
-                                lineNumber: 34,
+                                lineNumber: 39,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "src/subcomponent/nav.tsx",
-                            lineNumber: 25,
+                            lineNumber: 30,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/subcomponent/nav.tsx",
-                        lineNumber: 24,
+                        lineNumber: 29,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
                         className: "ml-4 fa-brands fa-github fa-2xl"
                     }, void 0, false, {
                         fileName: "src/subcomponent/nav.tsx",
-                        lineNumber: 38,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -46571,13 +46543,13 @@ function Nav() {
                         children: params.username
                     }, void 0, false, {
                         fileName: "src/subcomponent/nav.tsx",
-                        lineNumber: 39,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/subcomponent/nav.tsx",
-                lineNumber: 22,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46600,25 +46572,25 @@ function Nav() {
                                             d: "M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/nav.tsx",
-                                            lineNumber: 54,
+                                            lineNumber: 59,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/nav.tsx",
-                                        lineNumber: 45,
+                                        lineNumber: 50,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                         children: "Type / to search "
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/nav.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 61,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/nav.tsx",
-                                lineNumber: 44,
+                                lineNumber: 49,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
@@ -46633,18 +46605,18 @@ function Nav() {
                                     d: "m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/nav.tsx",
-                                    lineNumber: 67,
+                                    lineNumber: 72,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/nav.tsx",
-                                lineNumber: 58,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/nav.tsx",
-                        lineNumber: 43,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -46652,7 +46624,7 @@ function Nav() {
                         children: "|"
                     }, void 0, false, {
                         fileName: "src/subcomponent/nav.tsx",
-                        lineNumber: 70,
+                        lineNumber: 75,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -46662,7 +46634,7 @@ function Nav() {
                                 children: "+"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/nav.tsx",
-                                lineNumber: 72,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
@@ -46677,18 +46649,18 @@ function Nav() {
                                     d: "m4.427 7.427 3.396 3.396a.25.25 0 0 0 .354 0l3.396-3.396A.25.25 0 0 0 11.396 7H4.604a.25.25 0 0 0-.177.427Z"
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/nav.tsx",
-                                    lineNumber: 82,
+                                    lineNumber: 87,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/nav.tsx",
-                                lineNumber: 73,
+                                lineNumber: 78,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/nav.tsx",
-                        lineNumber: 71,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -46706,25 +46678,25 @@ function Nav() {
                                     d: "M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/nav.tsx",
-                                    lineNumber: 95,
+                                    lineNumber: 100,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
                                     d: "M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z"
                                 }, void 0, false, {
                                     fileName: "src/subcomponent/nav.tsx",
-                                    lineNumber: 96,
+                                    lineNumber: 101,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/subcomponent/nav.tsx",
-                            lineNumber: 86,
+                            lineNumber: 91,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/subcomponent/nav.tsx",
-                        lineNumber: 85,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -46741,17 +46713,17 @@ function Nav() {
                                 d: "M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/nav.tsx",
-                                lineNumber: 109,
+                                lineNumber: 114,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/subcomponent/nav.tsx",
-                            lineNumber: 100,
+                            lineNumber: 105,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/subcomponent/nav.tsx",
-                        lineNumber: 99,
+                        lineNumber: 104,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -46768,17 +46740,17 @@ function Nav() {
                                 d: "M2.8 2.06A1.75 1.75 0 0 1 4.41 1h7.18c.7 0 1.333.417 1.61 1.06l2.74 6.395c.04.093.06.194.06.295v4.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25v-4.5c0-.101.02-.202.06-.295Zm1.61.44a.25.25 0 0 0-.23.152L1.887 8H4.75a.75.75 0 0 1 .6.3L6.625 10h2.75l1.275-1.7a.75.75 0 0 1 .6-.3h2.863L11.82 2.652a.25.25 0 0 0-.23-.152Zm10.09 7h-2.875l-1.275 1.7a.75.75 0 0 1-.6.3h-3.5a.75.75 0 0 1-.6-.3L4.375 9.5H1.5v3.75c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Z"
                             }, void 0, false, {
                                 fileName: "src/subcomponent/nav.tsx",
-                                lineNumber: 122,
+                                lineNumber: 127,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "src/subcomponent/nav.tsx",
-                            lineNumber: 113,
+                            lineNumber: 118,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/subcomponent/nav.tsx",
-                        lineNumber: 112,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -46787,28 +46759,28 @@ function Nav() {
                             src: Getuser.avatar_url
                         }, void 0, false, {
                             fileName: "src/subcomponent/nav.tsx",
-                            lineNumber: 126,
+                            lineNumber: 131,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/subcomponent/nav.tsx",
-                        lineNumber: 125,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/subcomponent/nav.tsx",
-                lineNumber: 42,
+                lineNumber: 47,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/nav.tsx",
-        lineNumber: 21,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
-_s(Nav, "53osJm5YYpV1et7neqx26IwAdhQ=", false, function() {
+_s(Nav, "a4xf5A43IulLM52/NcAXbn18wcc=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _useprofile.useProfile)
@@ -46823,7 +46795,25 @@ $RefreshReg$(_c, "Nav");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/useprofile":"fC2Rw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"krule":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../context.ts":"heWSA","react":"21dqq","react-router-dom":"9xmpe","../hooks/useprofile":"fC2Rw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"heWSA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ae1d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ae1d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Profilecontext", ()=>Profilecontext);
+var _react = require("react");
+const Profilecontext = (0, _react.createContext)({});
+
+  $parcel$ReactRefreshHelpers$ae1d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"krule":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a983 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -46839,12 +46829,15 @@ var _reactGithubCalendarDefault = parcelHelpers.interopDefault(_reactGithubCalen
 var _useprofile = require("../hooks/useprofile");
 var _reactRouterDom = require("react-router-dom");
 var _usereposit = require("../hooks/usereposit");
+var _contextTs = require("../context.ts");
+var _react = require("react");
 var _s = $RefreshSig$();
 function Overview() {
     _s();
     const params = (0, _reactRouterDom.useParams)();
-    const { repositState, Getuser, setGetuser, loadingOVER, setrepositState, setloadingOVER } = (0, _useprofile.useProfile)(params.username);
-    const { loadingRepos, setloadingRepos, setrepoinfo, repoinfo } = (0, _usereposit.useRepos)(params.username, params.RepoTab);
+    const contex = (0, _react.useContext)((0, _contextTs.Profilecontext));
+    const { repositState, Getuser, setGetuser, loadingOVER, setrepositState, setloadingOVER } = (0, _useprofile.useProfile)(params.username, contex.token);
+    const { loadingRepos, setloadingRepos, setrepoinfo, repoinfo } = (0, _usereposit.useRepos)(params.username, params.RepoTab, contex.token);
     /*  if (loadingOVER) {
     return <div className="w-[70%] bg-white t-[10rem] text-xs ">LOADING OVERVIEW</div>;
   } */ return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46854,7 +46847,7 @@ function Overview() {
                 children: "Popular repositories"
             }, void 0, false, {
                 fileName: "src/subcomponent/Overview.tsx",
-                lineNumber: 30,
+                lineNumber: 34,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46871,7 +46864,7 @@ function Overview() {
                                         children: item.name
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Overview.tsx",
-                                        lineNumber: 37,
+                                        lineNumber: 41,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -46879,13 +46872,13 @@ function Overview() {
                                         children: item.visibility
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Overview.tsx",
-                                        lineNumber: 38,
+                                        lineNumber: 42,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 36,
+                                lineNumber: 40,
                                 columnNumber: 17
                             }, this),
                             "\xa0\xa0",
@@ -46894,7 +46887,7 @@ function Overview() {
                                 children: item.fork ? "forked from" + item.forks_count : ""
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 43,
+                                lineNumber: 47,
                                 columnNumber: 17
                             }, this),
                             "\xa0\xa0",
@@ -46905,7 +46898,7 @@ function Overview() {
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 47,
+                                lineNumber: 51,
                                 columnNumber: 17
                             }, this),
                             "\xa0\xa0",
@@ -46921,19 +46914,19 @@ function Overview() {
                                                     className: " solid w-[1rem] h-[1rem] bg-[#f1e05a] rounded-full inline-block"
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/Overview.tsx",
-                                                    lineNumber: 53,
+                                                    lineNumber: 57,
                                                     columnNumber: 23
                                                 }, this),
                                                 item.language
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/Overview.tsx",
-                                            lineNumber: 52,
+                                            lineNumber: 56,
                                             columnNumber: 21
                                         }, this) : ""
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Overview.tsx",
-                                        lineNumber: 50,
+                                        lineNumber: 54,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46955,24 +46948,24 @@ function Overview() {
                                                         d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
                                                     }, void 0, false, {
                                                         fileName: "src/subcomponent/Overview.tsx",
-                                                        lineNumber: 74,
+                                                        lineNumber: 78,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/Overview.tsx",
-                                                    lineNumber: 63,
+                                                    lineNumber: 67,
                                                     columnNumber: 23
                                                 }, this),
                                                 item.watchers_count
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/Overview.tsx",
-                                            lineNumber: 62,
+                                            lineNumber: 66,
                                             columnNumber: 21
                                         }, this) : ""
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Overview.tsx",
-                                        lineNumber: 60,
+                                        lineNumber: 64,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -46994,59 +46987,59 @@ function Overview() {
                                                         d: "M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"
                                                     }, void 0, false, {
                                                         fileName: "src/subcomponent/Overview.tsx",
-                                                        lineNumber: 96,
+                                                        lineNumber: 100,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/Overview.tsx",
-                                                    lineNumber: 85,
+                                                    lineNumber: 89,
                                                     columnNumber: 23
                                                 }, this),
                                                 item.forks_count
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/Overview.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 88,
                                             columnNumber: 21
                                         }, this) : ""
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Overview.tsx",
-                                        lineNumber: 82,
+                                        lineNumber: 86,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/Overview.tsx",
-                                lineNumber: 49,
+                                lineNumber: 53,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Overview.tsx",
-                        lineNumber: 35,
+                        lineNumber: 39,
                         columnNumber: 15
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "src/subcomponent/Overview.tsx",
-                lineNumber: 31,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             Getuser ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactGithubCalendarDefault.default), {
                 username: Getuser.login
             }, void 0, false, {
                 fileName: "src/subcomponent/Overview.tsx",
-                lineNumber: 110,
+                lineNumber: 114,
                 columnNumber: 18
             }, this) : null
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/Overview.tsx",
-        lineNumber: 29,
+        lineNumber: 33,
         columnNumber: 5
     }, this);
 }
-_s(Overview, "Bvr9T+3aTnKDvP9eZPkD4VN2ER4=", false, function() {
+_s(Overview, "QdjZjFTJ02sZ6/PytzV6ay5T2YA=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _useprofile.useProfile),
@@ -47062,7 +47055,7 @@ $RefreshReg$(_c, "Overview");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-github-calendar":"auekX","../hooks/useprofile":"fC2Rw","react-router-dom":"9xmpe","../hooks/usereposit":"gaPut","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"auekX":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-github-calendar":"auekX","../hooks/useprofile":"fC2Rw","react-router-dom":"9xmpe","../hooks/usereposit":"gaPut","../context.ts":"heWSA","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"auekX":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -62667,12 +62660,12 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useRepos", ()=>useRepos);
 var _react = require("react");
 var _getrepoORGTs = require("../api/getrepoORG.ts");
-function useRepos(name, owner) {
+function useRepos(name, owner, token) {
     console.log("valueeeeeee", owner);
     const [loadingRepos, setloadingRepos] = (0, _react.useState)(true);
     const [repoinfo, setrepoinfo] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
-        (0, _getrepoORGTs.getOrg)(name, owner).then(function(data) {
+        (0, _getrepoORGTs.getOrg)(name, owner, token).then(function(data) {
             setrepoinfo(data);
         }).finally(()=>{
             setloadingRepos(false);
@@ -62706,7 +62699,6 @@ parcelHelpers.export(exports, "Type", ()=>Type);
 parcelHelpers.export(exports, "Visibility", ()=>Visibility);
 parcelHelpers.export(exports, "getOrg", ()=>getOrg);
 var _octokit = require("octokit");
-var _constantTs = require("../constant.ts");
 var DefaultBranch;
 (function(DefaultBranch) {
     DefaultBranch["Main"] = "main";
@@ -62751,9 +62743,9 @@ var Visibility;
 (function(Visibility) {
     Visibility["Public"] = "public";
 })(Visibility || (Visibility = {}));
-async function getOrg(name, repo) {
+async function getOrg(name, repo, token) {
     const octokit = new (0, _octokit.Octokit)({
-        auth: (0, _constantTs.token)
+        auth: token
     });
     const org = await octokit.request("GET /repos/{owner}/{repo}", {
         owner: name,
@@ -62765,7 +62757,7 @@ async function getOrg(name, repo) {
     return org.data;
 }
 
-},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lC32Y":[function(require,module,exports) {
+},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lC32Y":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$78ce = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -62781,10 +62773,15 @@ var _menuTsx = require("../subcomponent/Menu.tsx");
 var _navTsx = require("../subcomponent/nav.tsx");
 var _repositoryTsx = require("../subcomponent/Repository.tsx");
 var _userepositTs = require("../hooks/usereposit.ts");
+var _contextTs = require("../context.ts");
+var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 function Repositories() {
     _s();
-    const { loadingRepos } = (0, _userepositTs.useRepos)();
+    const param = (0, _reactRouterDom.useParams)();
+    const contex = (0, _react.useContext)((0, _contextTs.Profilecontext));
+    const { loadingRepos } = (0, _userepositTs.useRepos)(param.username, param.repotab, contex.token);
     if (loadingRepos) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "absolute  top-0 left-0  right-0 border-none solid   bg-slate-300 min-w-screen-xl w-screen-xl h-[100vh] min-h-[100vh]",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -62792,12 +62789,12 @@ function Repositories() {
             children: "loading..."
         }, void 0, false, {
             fileName: "src/Pages/Repositories.tsx",
-            lineNumber: 13,
+            lineNumber: 18,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "src/Pages/Repositories.tsx",
-        lineNumber: 12,
+        lineNumber: 17,
         columnNumber: 7
     }, this);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -62808,18 +62805,18 @@ function Repositories() {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navTsx.Nav), {}, void 0, false, {
                         fileName: "src/Pages/Repositories.tsx",
-                        lineNumber: 21,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuTsx.Menu), {}, void 0, false, {
                         fileName: "src/Pages/Repositories.tsx",
-                        lineNumber: 23,
+                        lineNumber: 28,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/Pages/Repositories.tsx",
-                lineNumber: 19,
+                lineNumber: 24,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -62827,29 +62824,30 @@ function Repositories() {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _sidebarTsx.Sidebar), {}, void 0, false, {
                         fileName: "src/Pages/Repositories.tsx",
-                        lineNumber: 26,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _repositoryTsx.Reposit), {}, void 0, false, {
                         fileName: "src/Pages/Repositories.tsx",
-                        lineNumber: 27,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/Pages/Repositories.tsx",
-                lineNumber: 25,
+                lineNumber: 30,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Pages/Repositories.tsx",
-        lineNumber: 18,
+        lineNumber: 23,
         columnNumber: 5
     }, this);
 }
-_s(Repositories, "9mCqsdXFZnqmL8Pv6HCmc3/2G8I=", false, function() {
+_s(Repositories, "9pvHWlhqdkrsCskK6wQVh3EwPxs=", false, function() {
     return [
+        (0, _reactRouterDom.useParams),
         (0, _userepositTs.useRepos)
     ];
 });
@@ -62862,7 +62860,7 @@ $RefreshReg$(_c, "Repositories");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../compunents/Sidebar.tsx":"7vqEr","../subcomponent/Menu.tsx":"2wPuW","../subcomponent/nav.tsx":"lFT6V","../subcomponent/Repository.tsx":"61WU3","../hooks/usereposit.ts":"gaPut","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"61WU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../compunents/Sidebar.tsx":"7vqEr","../subcomponent/Menu.tsx":"2wPuW","../subcomponent/nav.tsx":"lFT6V","../subcomponent/Repository.tsx":"61WU3","../hooks/usereposit.ts":"gaPut","../context.ts":"heWSA","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"61WU3":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$d817 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -62906,20 +62904,7 @@ function Reposit() {
         "Java",
         "c"
     ];
-    /* if (loadingREPO) {
-    return (
-      
-       
-          <div className="bg-gray-500 flex justify-between items-center mx-auto w-screen-xl   min-h-[5rem]">
-          <div className="mx-auto flex justify-between items-center w-screen-xl  ">
-          
-      
-      Processing...
-    
-            </div>
-            </div>
-          ) 
-  } */ return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "w-[750px]   text-xs  ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -62936,7 +62921,7 @@ function Reposit() {
                         }
                     }, void 0, false, {
                         fileName: "src/subcomponent/Repository.tsx",
-                        lineNumber: 32,
+                        lineNumber: 21,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownButtonmenuTsx.DropdownButton), {
@@ -62947,7 +62932,7 @@ function Reposit() {
                         }
                     }, void 0, false, {
                         fileName: "src/subcomponent/Repository.tsx",
-                        lineNumber: 44,
+                        lineNumber: 33,
                         columnNumber: 10
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownlanguageTsx.DropdownLanguage), {
@@ -62959,26 +62944,26 @@ function Reposit() {
                         }
                     }, void 0, false, {
                         fileName: "src/subcomponent/Repository.tsx",
-                        lineNumber: 45,
+                        lineNumber: 34,
                         columnNumber: 10
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/subcomponent/Repository.tsx",
-                lineNumber: 31,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _renderCategTsx.RenderCateg), {
                 renderReposit: repositState
             }, void 0, false, {
                 fileName: "src/subcomponent/Repository.tsx",
-                lineNumber: 63,
+                lineNumber: 39,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/Repository.tsx",
-        lineNumber: 30,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }
@@ -63009,10 +62994,15 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "RenderCateg", ()=>RenderCateg);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
+var _contextTs = require("../context.ts");
+var _react = require("react");
+var _s = $RefreshSig$();
 function generateRepositoryLink(username, repository) {
     return `/${username}/${repository}`;
 }
 function RenderCateg(props) {
+    _s();
+    const contex = (0, _react.useContext)((0, _contextTs.Profilecontext));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex flex-wrap  ",
         children: [
@@ -63035,7 +63025,7 @@ function RenderCateg(props) {
                                             children: item.name
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/renderCateg.tsx",
-                                            lineNumber: 27,
+                                            lineNumber: 29,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -63043,18 +63033,18 @@ function RenderCateg(props) {
                                             children: item.visibility
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/renderCateg.tsx",
-                                            lineNumber: 31,
+                                            lineNumber: 33,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/renderCateg.tsx",
-                                    lineNumber: 26,
+                                    lineNumber: 28,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                lineNumber: 25,
+                                lineNumber: 27,
                                 columnNumber: 15
                             }, this),
                             "\xa0\xa0 \xa0\xa0",
@@ -63065,7 +63055,7 @@ function RenderCateg(props) {
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                lineNumber: 53,
+                                lineNumber: 40,
                                 columnNumber: 15
                             }, this),
                             "\xa0\xa0",
@@ -63081,19 +63071,19 @@ function RenderCateg(props) {
                                                     className: " solid w-[1rem] h-[1rem] bg-[#94a3b8] rounded-full inline-block"
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/renderCateg.tsx",
-                                                    lineNumber: 59,
+                                                    lineNumber: 46,
                                                     columnNumber: 21
                                                 }, this),
                                                 item.language
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/renderCateg.tsx",
-                                            lineNumber: 58,
+                                            lineNumber: 45,
                                             columnNumber: 19
                                         }, this) : ""
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 43,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -63115,24 +63105,24 @@ function RenderCateg(props) {
                                                         d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
                                                     }, void 0, false, {
                                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                                        lineNumber: 80,
+                                                        lineNumber: 67,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/renderCateg.tsx",
-                                                    lineNumber: 69,
+                                                    lineNumber: 56,
                                                     columnNumber: 23
                                                 }, this),
                                                 item.watchers_count
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/renderCateg.tsx",
-                                            lineNumber: 68,
+                                            lineNumber: 55,
                                             columnNumber: 21
                                         }, this) : ""
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                        lineNumber: 66,
+                                        lineNumber: 53,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -63154,24 +63144,24 @@ function RenderCateg(props) {
                                                         d: "M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"
                                                     }, void 0, false, {
                                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                                        lineNumber: 102,
+                                                        lineNumber: 89,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/renderCateg.tsx",
-                                                    lineNumber: 91,
+                                                    lineNumber: 78,
                                                     columnNumber: 23
                                                 }, this),
                                                 item.forks_count
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/renderCateg.tsx",
-                                            lineNumber: 90,
+                                            lineNumber: 77,
                                             columnNumber: 21
                                         }, this) : ""
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 75,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -63182,39 +63172,40 @@ function RenderCateg(props) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/renderCateg.tsx",
-                                            lineNumber: 111,
+                                            lineNumber: 98,
                                             columnNumber: 36
                                         }, this) : ""
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/renderCateg.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 97,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/renderCateg.tsx",
-                                lineNumber: 55,
+                                lineNumber: 42,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/renderCateg.tsx",
-                        lineNumber: 24,
+                        lineNumber: 26,
                         columnNumber: 13
                     }, this)
                 }, item.node_id, false, {
                     fileName: "src/subcomponent/renderCateg.tsx",
-                    lineNumber: 20,
+                    lineNumber: 22,
                     columnNumber: 11
                 }, this);
             })
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/renderCateg.tsx",
-        lineNumber: 15,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }
+_s(RenderCateg, "maUxpjB+CowHcq1+hEdsbAeq6Sk=");
 _c = RenderCateg;
 var _c;
 $RefreshReg$(_c, "RenderCateg");
@@ -63224,7 +63215,7 @@ $RefreshReg$(_c, "RenderCateg");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hlJwS":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../context.ts":"heWSA","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hlJwS":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$cef1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -66875,15 +66866,17 @@ var _contentTsx = require("./Content.tsx");
 var _uselanguageTs = require("../hooks/uselanguage.ts");
 var _persantageTsx = require("./persantage.tsx");
 var _percentagenumberTsx = require("./percentagenumber.tsx");
+var _contextTs = require("../context.ts");
 var _s = $RefreshSig$();
 function Mainrepo() {
     _s();
     const params = (0, _reactRouterDom.useParams)();
-    const { languages, setLanguages } = (0, _uselanguageTs.useLanguage)(params.username, params.Repotab);
-    const { repoinfo, setrepoinfo, setloadingRepos, loadingRepos } = (0, _userepositTs.useRepos)(params.username, params.Repotab);
-    const { Getuser, loading } = (0, _useprofileTs.useProfile)(params.username);
+    const contex = (0, _react.useContext)((0, _contextTs.Profilecontext));
+    const { languages, setLanguages } = (0, _uselanguageTs.useLanguage)(params.username, params.Repotab, contex.token);
+    const { repoinfo, setrepoinfo, setloadingRepos, loadingRepos } = (0, _userepositTs.useRepos)(params.username, params.Repotab, contex.token);
+    const { Getuser, loading } = (0, _useprofileTs.useProfile)(params.username, contex.token);
     /* const { branch } = useBranches(params.username!, params.Repotab!); */ const { data, error, isLoading } = (0, _swrDefault.default)(`Branch-${params.Repotab}`, ()=>{
-        return (0, _getbranchesTs.getBranch)(params.username, params.Repotab);
+        return (0, _getbranchesTs.getBranch)(params.username, params.Repotab, contex.token);
     });
     const [click, setclick] = (0, _react.useState)(false);
     const handleClick = ()=>setclick(!click);
@@ -66903,7 +66896,7 @@ function Mainrepo() {
         children: "Loading"
     }, void 0, false, {
         fileName: "src/subcomponent/Mainrepo.tsx",
-        lineNumber: 52,
+        lineNumber: 56,
         columnNumber: 12
     }, this);
     if (repoinfo) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -66919,7 +66912,7 @@ function Mainrepo() {
                                 src: Getuser?.avatar_url
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 59,
+                                lineNumber: 63,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -66931,7 +66924,7 @@ function Mainrepo() {
                                             children: repoinfo.name
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 66,
+                                            lineNumber: 70,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -66941,29 +66934,29 @@ function Mainrepo() {
                                                 children: repoinfo.visibility
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 68,
+                                                lineNumber: 72,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 67,
+                                            lineNumber: 71,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 69,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 64,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Mainrepo.tsx",
-                        lineNumber: 58,
+                        lineNumber: 62,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -66986,12 +66979,12 @@ function Mainrepo() {
                                                 d: "M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 85,
+                                                lineNumber: 89,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 76,
+                                            lineNumber: 80,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -67000,18 +66993,18 @@ function Mainrepo() {
                                                 children: "unwatch"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 89,
+                                                lineNumber: 93,
                                                 columnNumber: 21
                                             }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                                 children: "whatch"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 91,
+                                                lineNumber: 95,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 87,
+                                            lineNumber: 91,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -67029,40 +67022,40 @@ function Mainrepo() {
                                                                 className: " fas fa-caret-down"
                                                             }, void 0, false, {
                                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                lineNumber: 101,
+                                                                lineNumber: 105,
                                                                 columnNumber: 23
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                                            lineNumber: 100,
+                                                            lineNumber: 104,
                                                             columnNumber: 21
                                                         }, this),
                                                         click && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownmenuTsx.DropdownMenu), {}, void 0, false, {
                                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                                            lineNumber: 103,
+                                                            lineNumber: 107,
                                                             columnNumber: 31
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                                    lineNumber: 99,
+                                                    lineNumber: 103,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 94,
+                                            lineNumber: 98,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 79,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 74,
+                                lineNumber: 78,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -67082,12 +67075,12 @@ function Mainrepo() {
                                                 d: "M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 119,
+                                                lineNumber: 123,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 110,
+                                            lineNumber: 114,
                                             columnNumber: 17
                                         }, this),
                                         "fork",
@@ -67096,18 +67089,18 @@ function Mainrepo() {
                                             children: repoinfo.forks_count
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 126,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 113,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 108,
+                                lineNumber: 112,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -67127,12 +67120,12 @@ function Mainrepo() {
                                                 d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 138,
+                                                lineNumber: 142,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 129,
+                                            lineNumber: 133,
                                             columnNumber: 17
                                         }, this),
                                         "Star",
@@ -67141,30 +67134,30 @@ function Mainrepo() {
                                             children: repoinfo.forks_count
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 141,
+                                            lineNumber: 145,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 132,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 127,
+                                lineNumber: 131,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Mainrepo.tsx",
-                        lineNumber: 73,
+                        lineNumber: 77,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/subcomponent/Mainrepo.tsx",
-                lineNumber: 57,
+                lineNumber: 61,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -67197,12 +67190,12 @@ function Mainrepo() {
                                                                 d: "M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"
                                                             }, void 0, false, {
                                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                lineNumber: 164,
+                                                                lineNumber: 168,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                                            lineNumber: 154,
+                                                            lineNumber: 158,
                                                             columnNumber: 19
                                                         }, this),
                                                         repoinfo.default_branch,
@@ -67216,34 +67209,34 @@ function Mainrepo() {
                                                                         className: " fas fa-caret-down"
                                                                     }, void 0, false, {
                                                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                        lineNumber: 169,
+                                                                        lineNumber: 173,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                    lineNumber: 168,
+                                                                    lineNumber: 172,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 brclick && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownbranchTsx.DropdownBranch), {}, void 0, false, {
                                                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                    lineNumber: 171,
+                                                                    lineNumber: 175,
                                                                     columnNumber: 33
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                                            lineNumber: 167,
+                                                            lineNumber: 171,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                                    lineNumber: 153,
+                                                    lineNumber: 157,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 152,
+                                                lineNumber: 156,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -67265,12 +67258,12 @@ function Mainrepo() {
                                                                     d: "M9.5 3.25a2.25 2.25 0 1 1 3 2.122V6A2.5 2.5 0 0 1 10 8.5H6a1 1 0 0 0-1 1v1.128a2.251 2.251 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.5 0v1.836A2.493 2.493 0 0 1 6 7h4a1 1 0 0 0 1-1v-.628A2.25 2.25 0 0 1 9.5 3.25Zm-6 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8.25-.75a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5ZM4.25 12a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z"
                                                                 }, void 0, false, {
                                                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                    lineNumber: 187,
+                                                                    lineNumber: 191,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                lineNumber: 177,
+                                                                lineNumber: 181,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -67280,20 +67273,20 @@ function Mainrepo() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                lineNumber: 189,
+                                                                lineNumber: 193,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                                                 children: "Branche"
                                                             }, void 0, false, {
                                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                lineNumber: 190,
+                                                                lineNumber: 194,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                                        lineNumber: 176,
+                                                        lineNumber: 180,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -67317,12 +67310,12 @@ function Mainrepo() {
                                                                             d: "M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"
                                                                         }, void 0, false, {
                                                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                            lineNumber: 211,
+                                                                            lineNumber: 215,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                        lineNumber: 201,
+                                                                        lineNumber: 205,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -67335,7 +67328,7 @@ function Mainrepo() {
                                                                                     children: "0"
                                                                                 }, void 0, false, {
                                                                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                                    lineNumber: 215,
+                                                                                    lineNumber: 219,
                                                                                     columnNumber: 27
                                                                                 }, this),
                                                                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -67343,58 +67336,58 @@ function Mainrepo() {
                                                                                     children: "Tags"
                                                                                 }, void 0, false, {
                                                                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                                    lineNumber: 216,
+                                                                                    lineNumber: 220,
                                                                                     columnNumber: 27
                                                                                 }, this)
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                            lineNumber: 214,
+                                                                            lineNumber: 218,
                                                                             columnNumber: 25
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                        lineNumber: 213,
+                                                                        lineNumber: 217,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                lineNumber: 197,
+                                                                lineNumber: 201,
                                                                 columnNumber: 21
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                                            lineNumber: 193,
+                                                            lineNumber: 197,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                                        lineNumber: 192,
+                                                        lineNumber: 196,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 175,
+                                                lineNumber: 179,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                        lineNumber: 151,
+                                        lineNumber: 155,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "me-4",
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchaddTsx.Searchesadd), {}, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 225,
+                                            lineNumber: 229,
                                             columnNumber: 36
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                        lineNumber: 225,
+                                        lineNumber: 229,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -67411,29 +67404,29 @@ function Mainrepo() {
                                                             className: " fas fa-caret-down"
                                                         }, void 0, false, {
                                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                                            lineNumber: 232,
+                                                            lineNumber: 236,
                                                             columnNumber: 27
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                                    lineNumber: 228,
+                                                    lineNumber: 232,
                                                     columnNumber: 17
                                                 }, this),
                                                 fileclick && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownfileTsx.Dropdownfile), {}, void 0, false, {
                                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                                    lineNumber: 234,
+                                                    lineNumber: 238,
                                                     columnNumber: 31
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 227,
+                                            lineNumber: 231,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                        lineNumber: 226,
+                                        lineNumber: 230,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -67452,12 +67445,12 @@ function Mainrepo() {
                                                     d: "m11.28 3.22 4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L13.94 8l-3.72-3.72a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215Zm-6.56 0a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042L2.06 8l3.72 3.72a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L.47 8.53a.75.75 0 0 1 0-1.06Z"
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                                    lineNumber: 248,
+                                                    lineNumber: 252,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 238,
+                                                lineNumber: 242,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
@@ -67472,36 +67465,36 @@ function Mainrepo() {
                                                                 className: " fas fa-caret-down"
                                                             }, void 0, false, {
                                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                                lineNumber: 252,
+                                                                lineNumber: 256,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                                        lineNumber: 251,
+                                                        lineNumber: 255,
                                                         columnNumber: 17
                                                     }, this),
                                                     fileclick && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _dropdownfileTsx.Dropdownfile), {}, void 0, false, {
                                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                                        lineNumber: 254,
+                                                        lineNumber: 258,
                                                         columnNumber: 31
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 250,
+                                                lineNumber: 254,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                        lineNumber: 237,
+                                        lineNumber: 241,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 150,
+                                lineNumber: 154,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -67513,36 +67506,36 @@ function Mainrepo() {
                                             children: params.username
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 259,
+                                            lineNumber: 263,
                                             columnNumber: 74
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                        lineNumber: 259,
+                                        lineNumber: 263,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "rounded-xl",
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contentTsx.Contenttree), {}, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 260,
+                                            lineNumber: 264,
                                             columnNumber: 43
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "src/subcomponent/Mainrepo.tsx",
-                                        lineNumber: 260,
+                                        lineNumber: 264,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                lineNumber: 258,
+                                lineNumber: 262,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Mainrepo.tsx",
-                        lineNumber: 149,
+                        lineNumber: 153,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -67552,18 +67545,18 @@ function Mainrepo() {
                                 "About",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 268,
+                                    lineNumber: 272,
                                     columnNumber: 13
                                 }, this),
                                 "A massively spiffy yet delicately unobtrusive compression library.",
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 270,
+                                    lineNumber: 274,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 271,
+                                    lineNumber: 275,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -67581,19 +67574,19 @@ function Mainrepo() {
                                                 d: "m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 282,
+                                                lineNumber: 286,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 273,
+                                            lineNumber: 277,
                                             columnNumber: 15
                                         }, this),
                                         repoinfo?.homepage
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 272,
+                                    lineNumber: 276,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -67611,19 +67604,19 @@ function Mainrepo() {
                                                 d: "M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 296,
+                                                lineNumber: 300,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 287,
+                                            lineNumber: 291,
                                             columnNumber: 15
                                         }, this),
                                         "Readme"
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 286,
+                                    lineNumber: 290,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -67641,19 +67634,19 @@ function Mainrepo() {
                                                 d: "M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 310,
+                                                lineNumber: 314,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 301,
+                                            lineNumber: 305,
                                             columnNumber: 15
                                         }, this),
                                         "View License"
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 300,
+                                    lineNumber: 304,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -67672,19 +67665,19 @@ function Mainrepo() {
                                                 d: "M6 2c.306 0 .582.187.696.471L10 10.731l1.304-3.26A.751.751 0 0 1 12 7h3.25a.75.75 0 0 1 0 1.5h-2.742l-1.812 4.528a.751.751 0 0 1-1.392 0L6 4.77 4.696 8.03A.75.75 0 0 1 4 8.5H.75a.75.75 0 0 1 0-1.5h2.742l1.812-4.529A.751.751 0 0 1 6 2Z"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 325,
+                                                lineNumber: 329,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 315,
+                                            lineNumber: 319,
                                             columnNumber: 15
                                         }, this),
                                         "Activity"
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 314,
+                                    lineNumber: 318,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -67702,19 +67695,19 @@ function Mainrepo() {
                                                 d: "M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 339,
+                                                lineNumber: 343,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 330,
+                                            lineNumber: 334,
                                             columnNumber: 15
                                         }, this),
                                         repoinfo.stargazers_count
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 329,
+                                    lineNumber: 333,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -67732,12 +67725,12 @@ function Mainrepo() {
                                                 d: "M8 2c1.981 0 3.671.992 4.933 2.078 1.27 1.091 2.187 2.345 2.637 3.023a1.62 1.62 0 0 1 0 1.798c-.45.678-1.367 1.932-2.637 3.023C11.67 13.008 9.981 14 8 14c-1.981 0-3.671-.992-4.933-2.078C1.797 10.83.88 9.576.43 8.898a1.62 1.62 0 0 1 0-1.798c.45-.677 1.367-1.931 2.637-3.022C4.33 2.992 6.019 2 8 2ZM1.679 7.932a.12.12 0 0 0 0 .136c.411.622 1.241 1.75 2.366 2.717C5.176 11.758 6.527 12.5 8 12.5c1.473 0 2.825-.742 3.955-1.715 1.124-.967 1.954-2.096 2.366-2.717a.12.12 0 0 0 0-.136c-.412-.621-1.242-1.75-2.366-2.717C10.824 4.242 9.473 3.5 8 3.5c-1.473 0-2.825.742-3.955 1.715-1.124.967-1.954 2.096-2.366 2.717ZM8 10a2 2 0 1 1-.001-3.999A2 2 0 0 1 8 10Z"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 353,
+                                                lineNumber: 357,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 344,
+                                            lineNumber: 348,
                                             columnNumber: 15
                                         }, this),
                                         repoinfo.subscribers_count,
@@ -67745,7 +67738,7 @@ function Mainrepo() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 343,
+                                    lineNumber: 347,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -67763,12 +67756,12 @@ function Mainrepo() {
                                                 d: "M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"
                                             }, void 0, false, {
                                                 fileName: "src/subcomponent/Mainrepo.tsx",
-                                                lineNumber: 368,
+                                                lineNumber: 372,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Mainrepo.tsx",
-                                            lineNumber: 359,
+                                            lineNumber: 363,
                                             columnNumber: 15
                                         }, this),
                                         repoinfo.forks_count,
@@ -67776,44 +67769,44 @@ function Mainrepo() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 358,
+                                    lineNumber: 362,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _persantageTsx.Persentage), {}, void 0, false, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 374,
+                                    lineNumber: 378,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _percentagenumberTsx.PersentageNUM), {}, void 0, false, {
                                     fileName: "src/subcomponent/Mainrepo.tsx",
-                                    lineNumber: 375,
+                                    lineNumber: 379,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/subcomponent/Mainrepo.tsx",
-                            lineNumber: 266,
+                            lineNumber: 270,
                             columnNumber: 12
                         }, this)
                     }, void 0, false, {
                         fileName: "src/subcomponent/Mainrepo.tsx",
-                        lineNumber: 265,
+                        lineNumber: 269,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/subcomponent/Mainrepo.tsx",
-                lineNumber: 148,
+                lineNumber: 152,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/subcomponent/Mainrepo.tsx",
-        lineNumber: 56,
+        lineNumber: 60,
         columnNumber: 7
     }, this);
 }
-_s(Mainrepo, "EFGnu6LenzYdZ1e8C6h4i1ArUaQ=", false, function() {
+_s(Mainrepo, "qqNxBXYZcoazr/ZIh7gkqucN1sY=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _uselanguageTs.useLanguage),
@@ -67831,7 +67824,7 @@ $RefreshReg$(_c, "Mainrepo");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/useprofile.ts":"fC2Rw","../hooks/usereposit.ts":"gaPut","../usablesubcomponent/dropdownmenu.tsx":"5S05w","react":"21dqq","../usablesubcomponent/dropdownbranch.tsx":"alfRI","../usablesubcomponent/searchadd .tsx":"iduAI","../usablesubcomponent/dropdownfile.tsx":"1c99O","swr":"eTjul","../api/getbranches.ts":"cG5Qz","./Content.tsx":"iijC0","../hooks/uselanguage.ts":"lCiT0","./persantage.tsx":"lixNY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./percentagenumber.tsx":"6aVMZ"}],"5S05w":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/useprofile.ts":"fC2Rw","../hooks/usereposit.ts":"gaPut","../usablesubcomponent/dropdownmenu.tsx":"5S05w","react":"21dqq","../usablesubcomponent/dropdownbranch.tsx":"alfRI","../usablesubcomponent/searchadd .tsx":"iduAI","../usablesubcomponent/dropdownfile.tsx":"1c99O","swr":"eTjul","../api/getbranches.ts":"cG5Qz","./Content.tsx":"iijC0","../hooks/uselanguage.ts":"lCiT0","./persantage.tsx":"lixNY","./percentagenumber.tsx":"6aVMZ","../context.ts":"heWSA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5S05w":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$fd61 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -69751,10 +69744,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getBranch", ()=>getBranch);
 var _octokit = require("octokit");
-var _constantTs = require("../constant.ts");
-async function getBranch(owner, name) {
+async function getBranch(owner, name, token) {
     const octokit = new (0, _octokit.Octokit)({
-        auth: (0, _constantTs.token)
+        auth: token
     });
     const brancheApi = await octokit.request("GET /repos/{owner}/{repo}/branches", {
         owner: owner,
@@ -69767,7 +69759,7 @@ async function getBranch(owner, name) {
     return brancheApi.data;
 }
 
-},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iijC0":[function(require,module,exports) {
+},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iijC0":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$48b7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -69781,20 +69773,21 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _usecontentTs = require("../hooks/usecontent.ts");
 var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _react1 = require("@phosphor-icons/react");
 var _usecommitTs = require("../hooks/usecommit.ts");
 var _usecommitFilesTs = require("../hooks/usecommitFiles.ts");
+var _contextTs = require("../context.ts");
 var _s = $RefreshSig$();
 function Contenttree() {
     _s();
     var _s1 = $RefreshSig$();
     const paramse = (0, _reactRouterDom.useParams)();
-    const { contents, setcontent } = (0, _usecontentTs.useContent)(paramse.username, paramse.Repotab);
-    const { commit } = (0, _usecommitTs.useCommit)(paramse.username, paramse.Repotab);
+    const contex = (0, _react.useContext)((0, _contextTs.Profilecontext));
+    const { contents, setcontent } = (0, _usecontentTs.useContent)(paramse.username, paramse.Repotab, contex.token);
+    const { commit } = (0, _usecommitTs.useCommit)(paramse.username, paramse.repotab, contex.token);
     const returnFile = (elm)=>{
         _s1();
-        const { commitFile } = (0, _usecommitFilesTs.useCommitFile)(paramse.username, paramse.Repotab, elm);
+        const { commitFile } = (0, _usecommitFilesTs.useCommitFile)(paramse.username, paramse.Repotab, elm, contex.token);
         console.log("janeman", elm);
         return commitFile;
     };
@@ -69826,20 +69819,20 @@ function Contenttree() {
                                                     color: "#5e5eff"
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/Content.tsx",
-                                                    lineNumber: 54,
+                                                    lineNumber: 57,
                                                     columnNumber: 29
                                                 }, this) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react1.File), {
                                                     size: 24
                                                 }, void 0, false, {
                                                     fileName: "src/subcomponent/Content.tsx",
-                                                    lineNumber: 56,
+                                                    lineNumber: 59,
                                                     columnNumber: 29
                                                 }, this),
                                                 itms.name
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/subcomponent/Content.tsx",
-                                            lineNumber: 52,
+                                            lineNumber: 55,
                                             columnNumber: 25
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -69852,50 +69845,50 @@ function Contenttree() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "src/subcomponent/Content.tsx",
-                                                    lineNumber: 64,
+                                                    lineNumber: 67,
                                                     columnNumber: 33
                                                 }, this);
                                             })
                                         }, void 0, false, {
                                             fileName: "src/subcomponent/Content.tsx",
-                                            lineNumber: 60,
+                                            lineNumber: 63,
                                             columnNumber: 25
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/subcomponent/Content.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 54,
                                     columnNumber: 23
                                 }, this);
                             })
                         ]
                     }, void 0, true, {
                         fileName: "src/subcomponent/Content.tsx",
-                        lineNumber: 42,
+                        lineNumber: 45,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "src/subcomponent/Content.tsx",
-                    lineNumber: 41,
+                    lineNumber: 44,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "src/subcomponent/Content.tsx",
-                lineNumber: 40,
+                lineNumber: 43,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "src/subcomponent/Content.tsx",
-            lineNumber: 39,
+            lineNumber: 42,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/subcomponent/Content.tsx",
-        lineNumber: 38,
+        lineNumber: 41,
         columnNumber: 5
     }, this);
 }
-_s(Contenttree, "U0tfypkZ58R7BDot5bg71Yvp4Sk=", false, function() {
+_s(Contenttree, "qmptqC8E1C4EJL7q3fPeFuxdy7w=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _usecontentTs.useContent),
@@ -69911,7 +69904,7 @@ $RefreshReg$(_c, "Contenttree");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../hooks/usecontent.ts":"irOZV","react-router-dom":"9xmpe","react":"21dqq","@phosphor-icons/react":"ljzWN","../hooks/usecommit.ts":"8FiSV","../hooks/usecommitFiles.ts":"iMI9x","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"irOZV":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../hooks/usecontent.ts":"irOZV","react-router-dom":"9xmpe","react":"21dqq","@phosphor-icons/react":"ljzWN","../hooks/usecommit.ts":"8FiSV","../hooks/usecommitFiles.ts":"iMI9x","../context.ts":"heWSA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"irOZV":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$57ea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -69923,10 +69916,10 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useContent", ()=>useContent);
 var _react = require("react");
 var _getcontentTs = require("../api/getcontent.ts");
-function useContent(owner, repo) {
+function useContent(owner, repo, token) {
     const [contents, setcontent] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
-        (0, _getcontentTs.getContent)(owner, repo).then(function(data) {
+        (0, _getcontentTs.getContent)(owner, repo, token).then(function(data) {
             setcontent(data);
             console.log("content------content", contents);
         });
@@ -69947,10 +69940,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getContent", ()=>getContent);
 var _octokit = require("octokit");
-var _constantTs = require("../constant.ts");
-async function getContent(owner, repo) {
+async function getContent(owner, repo, token) {
     const octokit = new (0, _octokit.Octokit)({
-        auth: (0, _constantTs.token)
+        auth: token
     });
     const resulte = await octokit.request("GET /repos/{owner}/{repo}/contents", {
         owner: owner,
@@ -69963,7 +69955,7 @@ async function getContent(owner, repo) {
     return resulte.data.sort((a, b)=>a.type - b.type);
 }
 
-},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ljzWN":[function(require,module,exports) {
+},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ljzWN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Activity", ()=>(0, _pulseMjs.Pulse));
@@ -72764,12 +72756,12 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useCommit", ()=>useCommit);
 var _react = require("react");
 var _getCommitTs = require("../api/getCommit.ts");
-function useCommit(owner, name) {
+function useCommit(owner, name, token) {
     const [loadingCommit, setloadingCommit] = (0, _react.useState)(true);
     const [commit, setcommit] = (0, _react.useState)([]);
     const [sha, setsha] = (0, _react.useState)("");
     (0, _react.useEffect)(()=>{
-        (0, _getCommitTs.getCommits)(owner, name).then(function(data) {
+        (0, _getCommitTs.getCommits)(owner, name, token).then(function(data) {
             setcommit(data);
             setsha(data[0].sha);
             console.log("commit", sha);
@@ -72794,10 +72786,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getCommits", ()=>getCommits);
 var _octokit = require("octokit");
-var _constantTs = require("../constant.ts");
-async function getCommits(owner, name) {
+async function getCommits(owner, name, token) {
     const octokit = new (0, _octokit.Octokit)({
-        auth: (0, _constantTs.token)
+        auth: token
     });
     const Commits = await octokit.request("GET /repos/{owner}/{repo}/commits", {
         owner: owner,
@@ -72809,7 +72800,7 @@ async function getCommits(owner, name) {
     return Commits.data;
 }
 
-},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iMI9x":[function(require,module,exports) {
+},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iMI9x":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$aa23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -72821,11 +72812,11 @@ parcelHelpers.defineInteropFlag(exports);
 /* const {commit} = useCommit<Array<comm>>(param.username! , param.repotab ! )  */ parcelHelpers.export(exports, "useCommitFile", ()=>useCommitFile);
 var _react = require("react");
 var _getcommitsfileTs = require("../api/getcommitsfile.ts");
-function useCommitFile(owner, name, ref) {
+function useCommitFile(owner, name, ref, token) {
     const [commitFile, setcommitFile] = (0, _react.useState)([]);
     const [loadingCommitFile, setloadingCommitFile] = (0, _react.useState)(true);
     (0, _react.useEffect)(()=>{
-        (0, _getcommitsfileTs.getCommitFile)(owner, name, ref).then(function(data) {
+        (0, _getcommitsfileTs.getCommitFile)(owner, name, ref, token).then(function(data) {
             setcommitFile(data);
         });
     }, []);
@@ -72847,10 +72838,9 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getCommitFile", ()=>getCommitFile);
 var _octokit = require("octokit");
-var _constantTs = require("../constant.ts");
-async function getCommitFile(owner, name, ref) {
+async function getCommitFile(owner, name, ref, token) {
     const octokit = new (0, _octokit.Octokit)({
-        auth: (0, _constantTs.token)
+        auth: token
     });
     const CommitsFile = await octokit.request("GET /repos/:owner/:repo/commits/:sha", {
         owner: owner,
@@ -72864,7 +72854,7 @@ async function getCommitFile(owner, name, ref) {
     return CommitsFile.data;
 }
 
-},{"octokit":"7AEgE","../constant.ts":"26vZf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lCiT0":[function(require,module,exports) {
+},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lCiT0":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b9ad = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -72876,10 +72866,10 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useLanguage", ()=>useLanguage);
 var _react = require("react");
 var _getlanguageTs = require("../api/getlanguage.ts");
-function useLanguage(owner, repo) {
+function useLanguage(owner, repo, token) {
     const [languages, setLanguages] = (0, _react.useState)({});
     (0, _react.useEffect)(()=>{
-        (0, _getlanguageTs.getLanguage)(owner, repo).then(function(data) {
+        (0, _getlanguageTs.getLanguage)(owner, repo, token).then(function(data) {
             setLanguages(data);
             console.log("languageslanguages", languages);
         });
@@ -72899,11 +72889,10 @@ function useLanguage(owner, repo) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getLanguage", ()=>getLanguage);
-var _constant = require("../constant");
 var _octokit = require("octokit");
-async function getLanguage(owner, repo) {
+async function getLanguage(owner, repo, token) {
     const octokit = new (0, _octokit.Octokit)({
-        auth: (0, _constant.token)
+        auth: token
     });
     const lang = await octokit.request("GET /repos/{owner}/{repo}/languages", {
         owner: owner,
@@ -72915,7 +72904,7 @@ async function getLanguage(owner, repo) {
     return lang.data;
 }
 
-},{"../constant":"26vZf","octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lixNY":[function(require,module,exports) {
+},{"octokit":"7AEgE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lixNY":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e376 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -72928,11 +72917,14 @@ parcelHelpers.export(exports, "Persentage", ()=>Persentage);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 var _uselanguage = require("../hooks/uselanguage");
+var _contextTs = require("../context.ts");
+var _react = require("react");
 var _s = $RefreshSig$();
 function Persentage() {
     _s();
+    const contex = (0, _react.useContext)((0, _contextTs.Profilecontext));
     const paramsee = (0, _reactRouterDom.useParams)();
-    const { languages, setLanguages } = (0, _uselanguage.useLanguage)(paramsee.username, paramsee.Repotab);
+    const { languages, setLanguages } = (0, _uselanguage.useLanguage)(paramsee.username, paramsee.Repotab, contex.token);
     const entries = Object.entries(languages);
     console.log("langggg", entries);
     /*  interface languages{
@@ -72957,21 +72949,21 @@ function Persentage() {
                         className: `w-[${(itm[1] / sum * 100).toFixed(2) + "%"}] bg-[#4338ca] border-2  solid h-[0.7rem] rounded-s-xl`
                     }, index, false, {
                         fileName: "src/subcomponent/persantage.tsx",
-                        lineNumber: 41,
+                        lineNumber: 45,
                         columnNumber: 41
                     }, this) : undefined,
                     entries[1] && entries[1][0] === itm[0] ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: `w-[${(itm[1] / sum * 100).toFixed(2) + "%"}] bg-[#6b21a8] border-2  solid h-[0.7rem] `
                     }, index, false, {
                         fileName: "src/subcomponent/persantage.tsx",
-                        lineNumber: 44,
+                        lineNumber: 48,
                         columnNumber: 55
                     }, this) : "",
                     entries[2] && entries[2][0] === itm[0] ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: `w-[${(itm[1] / sum * 100).toFixed(2) + "%"}] bg-[#e11d48] border-2  solid h-[0.7rem] rounded-e-xl`
                     }, index, false, {
                         fileName: "src/subcomponent/persantage.tsx",
-                        lineNumber: 47,
+                        lineNumber: 51,
                         columnNumber: 55
                     }, this) : ""
                 ]
@@ -72979,11 +72971,11 @@ function Persentage() {
         })
     }, void 0, false, {
         fileName: "src/subcomponent/persantage.tsx",
-        lineNumber: 31,
+        lineNumber: 35,
         columnNumber: 5
     }, this);
 }
-_s(Persentage, "U5ts4Jk/yTUHGlltDFGTS8m63Oo=", false, function() {
+_s(Persentage, "+j3QMyphLEi4JW1AWOfYzhN+ALA=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _uselanguage.useLanguage)
@@ -72998,7 +72990,7 @@ $RefreshReg$(_c, "Persentage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/uselanguage":"lCiT0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6aVMZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/uselanguage":"lCiT0","../context.ts":"heWSA","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6aVMZ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$dcb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -73011,11 +73003,14 @@ parcelHelpers.export(exports, "PersentageNUM", ()=>PersentageNUM);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 var _uselanguage = require("../hooks/uselanguage");
+var _contextTs = require("../context.ts");
+var _react = require("react");
 var _s = $RefreshSig$();
 function PersentageNUM() {
     _s();
+    const contex = (0, _react.useContext)((0, _contextTs.Profilecontext));
     const paramsee = (0, _reactRouterDom.useParams)();
-    const { languages, setLanguages } = (0, _uselanguage.useLanguage)(paramsee.username, paramsee.Repotab);
+    const { languages, setLanguages } = (0, _uselanguage.useLanguage)(paramsee.username, paramsee.Repotab, contex.token);
     const entries = Object.entries(languages);
     console.log("langggg", entries);
     /*  interface languages{
@@ -73045,7 +73040,7 @@ function PersentageNUM() {
                         ]
                     }, index, true, {
                         fileName: "src/subcomponent/percentagenumber.tsx",
-                        lineNumber: 41,
+                        lineNumber: 45,
                         columnNumber: 41
                     }, this) : undefined,
                     entries[1] && entries[1][0] === itm[0] ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -73057,7 +73052,7 @@ function PersentageNUM() {
                         ]
                     }, index, true, {
                         fileName: "src/subcomponent/percentagenumber.tsx",
-                        lineNumber: 44,
+                        lineNumber: 48,
                         columnNumber: 55
                     }, this) : undefined,
                     entries[2] && entries[2][0] === itm[0] ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -73069,7 +73064,7 @@ function PersentageNUM() {
                         ]
                     }, index, true, {
                         fileName: "src/subcomponent/percentagenumber.tsx",
-                        lineNumber: 47,
+                        lineNumber: 51,
                         columnNumber: 54
                     }, this) : undefined
                 ]
@@ -73077,11 +73072,11 @@ function PersentageNUM() {
         })
     }, void 0, false, {
         fileName: "src/subcomponent/percentagenumber.tsx",
-        lineNumber: 31,
+        lineNumber: 35,
         columnNumber: 5
     }, this);
 }
-_s(PersentageNUM, "U5ts4Jk/yTUHGlltDFGTS8m63Oo=", false, function() {
+_s(PersentageNUM, "+j3QMyphLEi4JW1AWOfYzhN+ALA=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _uselanguage.useLanguage)
@@ -73096,7 +73091,7 @@ $RefreshReg$(_c, "PersentageNUM");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/uselanguage":"lCiT0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"84eGR":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../hooks/uselanguage":"lCiT0","../context.ts":"heWSA","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"84eGR":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$683e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -73313,6 +73308,12 @@ $RefreshReg$(_c, "Menudynamic");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"26vZf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "token", ()=>token);
+const token = "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";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["9p54t","1xC6H","4aBH6"], "4aBH6", "parcelRequireb323")
 
 //# sourceMappingURL=index.2d3ace14.js.map

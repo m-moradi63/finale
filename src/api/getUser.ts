@@ -1,5 +1,5 @@
 import { Octokit } from "octokit";
-import {token} from "../constant.ts"
+import { Profilecontext } from "../context.ts";
 
 export interface User{
   avatar_url : string | undefined,
@@ -37,7 +37,7 @@ export interface Repositoryes{
 
 
 
-async function getUser(username:string) : Promise<User>{
+async function getUser(username:string , token:Object) : Promise<User>{
   const octokit = new Octokit({ auth: token })
 
   const old = (await octokit.request("GET /users/{username}/", {

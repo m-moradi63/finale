@@ -1,9 +1,14 @@
+import { Profilecontext } from "../context.ts";
+import { useContext } from "react";
+
+
 import { useParams } from "react-router-dom";
 import { useProfile } from "../hooks/useprofile";
 
 export function Nav() {
   const params = useParams();
-  const { Getuser, loadingOVER} = useProfile(params.username!);
+  const contex = useContext(Profilecontext)
+  const { Getuser, loadingOVER} = useProfile(params.username!,contex.token);
   console.log("loading overrrr:" , loadingOVER)
   /* if (loadingOVER) {
     return (

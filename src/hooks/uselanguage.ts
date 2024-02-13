@@ -9,13 +9,13 @@ import { language , getLanguage } from "../api/getlanguage.ts";
 
 
 
-export function useLanguage( owner:string ,repo:string ) {
+export function useLanguage( owner:string ,repo:string , token:string) {
 
   const [languages , setLanguages] = useState<language>({});
   
 
   useEffect(() => {
-    getLanguage(owner ,repo )
+    getLanguage(owner ,repo , token)
       .then(function (data) {
         setLanguages(data);
         console.log("languageslanguages" , languages)

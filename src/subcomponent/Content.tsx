@@ -1,26 +1,29 @@
 import { useContent } from "../hooks/usecontent.ts";
-import { useParams } from "react-router-dom";
-import React from "react";
+import { useParams  } from "react-router-dom";
+import { useContext } from "react";
 import { isTemplateExpression } from "typescript";
 import { Folder, File } from "@phosphor-icons/react";
 import { useCommit } from "../hooks/usecommit.ts";
 import { useCommitFile } from "../hooks/usecommitFiles.ts";
 import { useLanguage } from "../hooks/uselanguage.ts";
+import { Profilecontext } from "../context.ts";
 
 export function Contenttree() {
   const paramse = useParams();
-
+  const contex = useContext(Profilecontext)
   const { contents, setcontent } = useContent(
     paramse.username!,
-    paramse.Repotab!
+    paramse.Repotab!,
+    contex.token
   );
 
-  const { commit } = useCommit(paramse.username!, paramse.Repotab!);
+  const { commit } = useCommit(paramse.username!,paramse.repotab! , contex.token);
   const returnFile = (elm) => {
     const { commitFile } = useCommitFile(
       paramse.username!,
       paramse.Repotab!,
-      elm
+      elm,
+      contex.token
     );
     console.log("janeman", elm);
     return commitFile;

@@ -11,7 +11,7 @@ export interface comm {
     
  }
 
-async function getCommitFile(owner:string , name:string , ref:string): Promise<Array<any>>{
+async function getCommitFile(owner:string , name:string , ref:string , token:Object): Promise<Array<any>>{
     
     const octokit = new Octokit({
         auth: token

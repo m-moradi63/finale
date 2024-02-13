@@ -10,7 +10,7 @@ import { getCommitFile } from "../api/getcommitsfile.ts";
 import { useCommit } from "./usecommit.ts";
 
 /* const {commit} = useCommit<Array<comm>>(param.username! , param.repotab ! )  */
-export function useCommitFile(owner:string , name:string ,ref:string) {
+export function useCommitFile(owner:string , name:string ,ref:string, token:Object) {
   
   const [commitFile , setcommitFile] = useState<Array<any>>([]);
   const [loadingCommitFile, setloadingCommitFile] = useState(true);
@@ -20,7 +20,7 @@ export function useCommitFile(owner:string , name:string ,ref:string) {
 
   useEffect(() => {
     
-    getCommitFile(owner ,name ,ref )
+    getCommitFile(owner ,name ,ref , token)
       .then(function (data) {
         setcommitFile(data);
        

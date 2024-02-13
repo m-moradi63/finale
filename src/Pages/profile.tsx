@@ -5,11 +5,16 @@ import { Overview } from "../subcomponent/Overview.tsx";
 import { useParams, useSearchParams } from "react-router-dom";
 import { Repositories } from "./Repositories.tsx";
 import { useProfile } from "../hooks/useprofile.ts";
+import { Profilecontext } from "../context.ts";
+import { useContext } from "react";
 
 export function Profile() {
+  const contex = useContext(Profilecontext)
+  console.log("::::::::" , contex.token)
   const params= useParams()
+  console.log("pp" , params.repotab)
   let [searchParams, setSearchParams] = useSearchParams();
-  const {Getuser , loadingOVER}=useProfile(params.username!)
+  const {Getuser , loadingOVER}=useProfile(params.username! , contex.token)
   console.log("searchparams" , searchParams)
   if(loadingOVER){
     return(

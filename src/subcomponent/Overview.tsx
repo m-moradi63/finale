@@ -6,9 +6,12 @@ import { usertype } from "../App";
 import { useProfile } from "../hooks/useprofile";
 import { useParams } from "react-router-dom";
 import { useRepos } from "../hooks/usereposit";
+import { Profilecontext } from "../context.ts";
+import { useContext } from "react";
 
 export function Overview() {
   const params = useParams();
+  const contex = useContext(Profilecontext)
   const {
     repositState,
     Getuser,
@@ -16,10 +19,11 @@ export function Overview() {
     loadingOVER,
     setrepositState,
     setloadingOVER,
-  } = useProfile(params.username!);
+  } = useProfile(params.username!,contex.token);
   const { loadingRepos, setloadingRepos, setrepoinfo, repoinfo } = useRepos(
     params.username!,
-    params.RepoTab!
+    params.RepoTab!,
+    contex.token
   );
 
  /*  if (loadingOVER) {

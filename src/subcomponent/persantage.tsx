@@ -1,13 +1,17 @@
 import { useParams } from "react-router-dom";
 import { useLanguage } from "../hooks/uselanguage";
+import { Profilecontext } from "../context.ts";
+import { useContext } from "react";
 
 
 
 export function Persentage() {
+    const contex = useContext(Profilecontext)
     const paramsee = useParams();
 const { languages, setLanguages } = useLanguage(
     paramsee.username!,
-    paramsee.Repotab! )
+    paramsee.Repotab! ,
+    contex.token)
     const entries = Object.entries(languages)
     console.log("langggg" , entries)
    /*  interface languages{

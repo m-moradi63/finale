@@ -8,13 +8,13 @@ import { contented } from "../api/getcontent.ts";
 
 
 
-export function useContent( owner:string ,repo:string ) {
+export function useContent( owner:string ,repo:string , token:string ) {
 
   const [contents , setcontent] = useState<Array<contented>>([]);
   
 
   useEffect(() => {
-    getContent(owner ,repo )
+    getContent(owner ,repo , token )
       .then(function (data) {
         setcontent(data);
         console.log("content------content" , contents)

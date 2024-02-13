@@ -10,7 +10,7 @@ export interface comm {
     
  }
 
-async function getCommits(owner:string , name:string ): Promise<Array<comm>>{
+async function getCommits(owner:string , name:string , token:Object): Promise<Array<comm>>{
     
     const octokit = new Octokit({
         auth: token

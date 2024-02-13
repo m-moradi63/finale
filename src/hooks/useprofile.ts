@@ -2,11 +2,8 @@ import { ALL } from "dns";
 import { User, getUser } from "../api/getUser.ts";
 import { getRepos, Repositoryes} from "../api/getrepository"
 import { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
 
-
-
-export function useProfile(username:string ) {
+export function useProfile(username:string , token:string ) {
   const [Getuser, setGetuser] = useState<User>();
   const [loading, setloading] = useState(true);
   const [repositState, setrepositState] = useState<Array<Repositoryes>>([]);
@@ -15,13 +12,9 @@ export function useProfile(username:string ) {
   const [filter, setfilter] = useState<string>("");
   const [searchItem, setSearchItem] = useState("");
   const [languageItem, setlanguageItem] = useState("");
- 
-
-
-
- 
+  
   useEffect(() => {
-    getRepos(username!)
+    getRepos(username!, token)
       .then(function (data) {
         setrepositState(data);
       })
@@ -31,7 +24,7 @@ export function useProfile(username:string ) {
   }, []);
   useEffect(() => {
     setloadingOVER(false);
-    getUser(username!)
+    getUser(username!, token!)
       .then(function (data) {
         setGetuser(data);
         
@@ -41,7 +34,7 @@ export function useProfile(username:string ) {
       });
   }, []);
   useEffect(() => {
-    getUser(username)
+    getUser(username , token)
       .then(function (data) {
         setGetuser(data);
       })
@@ -50,7 +43,7 @@ export function useProfile(username:string ) {
       });
   }, []);
   useEffect(() => {
-    getRepos(username)
+    getRepos(username , token)
       .then(function (data) {
         setrepositState(data);
       })
@@ -75,8 +68,6 @@ export function useProfile(username:string ) {
     setSearchItem:setSearchItem,
     languageItem:languageItem,
     setlanguageItem:setlanguageItem
-
-    
   };
 }
 
@@ -113,14 +104,4 @@ if(searchItem){
 }
 return output
 
-  
-  
- /*  function fidrepository(applyFilter , searchItem:string){
-  if(searchItem) {
-   applyFilter.filter ((elm)=>{
-    return elm.includes(searchItem)}
-
-    
- 
-  } */
 }

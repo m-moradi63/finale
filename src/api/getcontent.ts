@@ -12,7 +12,7 @@ export  interface contented{
     full_name: string;
 
 }
-async function getContent(owner:string , repo:string ):Promise<Array<contented>> {
+async function getContent(owner:string , repo:string , token:string):Promise<Array<contented>> {
  
   const octokit = new Octokit({ auth: token })
   const resulte = await octokit.request('GET /repos/{owner}/{repo}/contents', {

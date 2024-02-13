@@ -1,58 +1,9 @@
 import { Link, NavLink, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Profilecontext } from "../context.ts";
+import { useContext } from "react";
 
 
-
-/* 
-export const Menu = ()=>{
-  const params = useParams();  
-  const [checked , setchecked] = useState<string>("Overview")
-    const selection = ((items:string)=>{
-        setchecked(items)
-        console.log("checkedddd" , items)
-    })
-    const slidered = ((val:string)=>{
-     if (val==="Overview") return "left-[0%]       top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
-    else if (val==="Repository") return  "left-[20%] rounded-lg   top-11    absolute h-[0.2rem] bg-[#6f55ca] w-[7rem]  "
-    else if (val==="Projectss") return  "left-[45%]    rounded-lg     top-11     absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
-    
-    else if (val==="Package") return  "left-[65%]   rounded-lg    top-11      absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
-    else if (val==="Stars") return  "left-[82%]   rounded-lg    top-11       absolute h-[0.2rem] bg-[#6f55ca] w-[6rem]  "
-    })
-    return(
-        <div className="relative  fonts-sans w-full bg-gray-300 ">
-        <div className=" w-[50%] flex justify-between rounded-lg flex items-center content-center flex-col">
-            
-            <input type="radio" name="slider"  value="no" id="Overview" className=" hidden"  onChange={()=>{selection("Overview")}} />
-            <input type="radio" name="slider"  value="no" id="Repository"  className=" hidden  " onChange={()=>{selection("Repository")}} />
-            <input type="radio" name="slider"  value="no" id="Projectss" className=" hidden" onChange={()=>{selection("Projectss")}} />
-            <input type="radio" name="slider" value="no" id="Package" className=" hidden" onChange={()=>{selection("Package")}}/>
-            <input type="radio" name="slider" value="no" id="Stars" className=" hidden" onChange={()=>{selection("Stars")}}/>
-            <nav className="relative   mr-[1rem]   ">
-               
-                <label  htmlFor="Overview" className= {checked==="Overview"?"me-8 text-blue-600 relative  h-[100%]  items-center text-xl font-semibold transition-all cursor-pointer":"me-8 relative  h-[100%] w-[100%] items-center text-xl font-semibold transition-all cursor-pointer"} >
-                <NavLink to={`/${params.username}/Overview`}>Overview</NavLink></label>
-                
-                
-                <label htmlFor="Repository" className={checked==="Repository"?"me-8 text-blue-600 relative h-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 ":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer peer-checked-label:text-blue-600 "} >
-                <NavLink to={`/${params.username}/repositories`}>Repository</NavLink></label>
-                
-                <label htmlFor="Projectss" className={checked==="Projectss"?"me-8 text-blue-600 relative h-[100%] ] items-center text-xl font-semibold cursor-pointer":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" } >Projectss</label>
-                <label htmlFor="Package" className={checked==="Package"?"me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" }>Package</label>
-                <label htmlFor="Stars" className={checked==="Stars"?"me-8 text-blue-600 relative h-[100%]  items-center text-xl font-semibold cursor-pointer":"me-8 relative h-[100%] w-[100%] items-center text-xl font-semibold cursor-pointer" }>Stars</label>
-                <div id="slider" 
-                className= {slidered(checked)}
-             
-                    >
-                
-                </div>
-                <div className="rounded-xl border-none h-[1px] mt-[1rem] w-full relative bg-slate-400"></div>
-            </nav>
-            
-        </div>
-        </div>
-    )
-} */
 
 
 

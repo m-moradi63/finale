@@ -5,14 +5,14 @@ import { useParams } from 'react-router-dom';
 import { getOrg , Repositspecial } from "../api/getrepoORG.ts";
 
 
-export function useRepos(name:string , owner:string ) {
+export function useRepos(name:string , owner:string , token:string) {
  console.log("valueeeeeee" , owner)
   const [loadingRepos, setloadingRepos] = useState(true);
   const [repoinfo , setrepoinfo] = useState<Array<Repositspecial>>([]);
   
 
   useEffect(() => {
-    getOrg(name, owner)
+    getOrg(name, owner, token)
       .then(function (data) {
         setrepoinfo(data);
       })

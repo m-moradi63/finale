@@ -8,7 +8,7 @@ import useSWR from "swr"
 import { comm, getCommits } from "../api/getCommit.ts";
 
 
-export  function useCommit(owner:string , name:string  ) {
+export  function useCommit(owner:string , name:string , token:Object ) {
  
   const [loadingCommit, setloadingCommit] = useState(true);
   const [commit , setcommit] = useState<Array<comm>>([]);
@@ -21,7 +21,7 @@ export  function useCommit(owner:string , name:string  ) {
   
   useEffect(() => {
    
-    getCommits(owner ,name )
+    getCommits(owner ,name ,token)
       .then(function (data) {
         setcommit(data);
         setsha(data[0].sha)

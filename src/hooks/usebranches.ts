@@ -7,7 +7,7 @@ import { getBranch, brancheses} from "../api/getbranches.ts";
 import useSWR from "swr"
 
 
-export function useBranches(owner:string , name:string  ) {
+export function useBranches(owner:string , name:string ,token:Object ) {
  
   const [loadingBranch, setloadingBranch] = useState(true);
   const [branch , setbranch] = useState<brancheses>({});
@@ -26,7 +26,7 @@ export function useBranches(owner:string , name:string  ) {
 
 
 
-  const { data, error, isLoading } = useSWR('/api/user', ()=>{return getBranch(owner , name)})
+  const { data, error, isLoading } = useSWR('/api/user', ()=>{return getBranch(owner , name ,token )})
 
  
   return {

@@ -15,22 +15,26 @@ import { Contenttree } from "./Content.tsx";
 import { useLanguage } from "../hooks/uselanguage.ts";
 import { Persentage } from "./persantage.tsx";
 import { PersentageNUM } from "./percentagenumber.tsx";
+import { Profilecontext } from "../context.ts";
+import { useContext } from "react";
 export function Mainrepo() {
   const params = useParams();
-  
+  const contex = useContext(Profilecontext)
   const { languages, setLanguages } = useLanguage(
     params.username!,
-    params.Repotab!
+    params.Repotab!,
+    contex.token
   );
   const { repoinfo, setrepoinfo, setloadingRepos, loadingRepos } = useRepos(
     params.username!,
-    params.Repotab!
+    params.Repotab!,
+    contex.token
   );
-  const { Getuser, loading } = useProfile(params.username!);
+  const { Getuser, loading } = useProfile(params.username!,contex.token);
 
   /* const { branch } = useBranches(params.username!, params.Repotab!); */
   const { data, error, isLoading } = useSWR(`Branch-${params.Repotab!}`, () => {
-    return getBranch(params.username!, params.Repotab!);
+    return getBranch(params.username!, params.Repotab! , contex.token);
   });
 
   const [click, setclick] = useState(false);
